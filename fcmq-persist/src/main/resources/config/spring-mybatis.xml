@@ -18,7 +18,7 @@
 	                 	http://www.springframework.org/schema/mvc
 	                    http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 	<!-- 配置數據源 -->
-	<context:property-placeholder location="classpath:properties/AIinfo.properties" />
+	<context:property-placeholder location="classpath:properties/fcmq.properties" />
 	
 	<bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
 		init-method="" destroy-method="close">
@@ -59,7 +59,7 @@
 		<property name="mapperLocations" value="classpath:mapper/*.xml" />
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.danlu.dleye.persist.mapper" />
+		<property name="basePackage" value="com.fc.mq.persist.mapper" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -92,7 +92,7 @@
 	</tx:advice>
 	<aop:config proxy-target-class="true">
 		<aop:pointcut id="engineInterceptorPointCuts"
-			expression="execution(* com.danlu.dleye.core..*.*(..))" />
+			expression="execution(* com.fc.mq.core..*.*(..))" />
 		<aop:advisor advice-ref="transactionAdvice" pointcut-ref="engineInterceptorPointCuts" />
 	</aop:config>
 	</beans>

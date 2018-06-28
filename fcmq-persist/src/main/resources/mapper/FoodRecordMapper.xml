@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.danlu.dleye.persist.mapper.FoodRecordMapper" >
-  <resultMap id="BaseResultMap" type="com.danlu.dleye.persist.base.FoodRecord" >
+<mapper namespace="com.fc.mq.persist.mapper.FoodRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.fc.mq.persist.base.FoodRecord" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="record_time" property="recordTime" jdbcType="TIMESTAMP" />
     <result column="type" property="type" jdbcType="VARCHAR" />
@@ -64,7 +64,7 @@
     delete from aiinfo_food_record
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.danlu.dleye.persist.base.FoodRecord" >
+  <insert id="insert" parameterType="com.fc.mq.persist.base.FoodRecord" >
     insert into aiinfo_food_record (id, record_time, type, 
       number, unit, info, 
       status, create_person, gmt_create, 
@@ -73,7 +73,7 @@
       #{number,jdbcType=INTEGER}, #{unit,jdbcType=VARCHAR}, #{info,jdbcType=VARCHAR}, 
       #{status,jdbcType=VARCHAR}, #{createPerson,jdbcType=VARCHAR}, NOW(), NOW())
   </insert>
-  <insert id="insertSelective" parameterType="com.danlu.dleye.persist.base.FoodRecord" >
+  <insert id="insertSelective" parameterType="com.fc.mq.persist.base.FoodRecord" >
     insert into aiinfo_food_record
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -132,7 +132,7 @@
         NOW()
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.danlu.dleye.persist.base.FoodRecord" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.fc.mq.persist.base.FoodRecord" >
     update aiinfo_food_record
     <set >
       <if test="recordTime != null" >
@@ -160,7 +160,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.danlu.dleye.persist.base.FoodRecord" >
+  <update id="updateByPrimaryKey" parameterType="com.fc.mq.persist.base.FoodRecord" >
     update aiinfo_food_record
     set record_time = #{recordTime,jdbcType=TIMESTAMP},
       type = #{type,jdbcType=VARCHAR},

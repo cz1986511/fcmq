@@ -41,8 +41,8 @@
 	</mvc:annotation-driven>
 	
 	<!-- 注解扫描 -->
-	<context:component-scan base-package="com.danlu.web.controller" />
-	<context:component-scan base-package="com.danlu.web.springconfig" />
+	<context:component-scan base-package="com.fc.web.controller" />
+	<context:component-scan base-package="com.fc.web.springconfig" />
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 
