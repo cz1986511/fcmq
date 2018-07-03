@@ -45,7 +45,7 @@
 	<context:component-scan base-package="com.fc.web.springconfig" />
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
 	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
-
+	
 	<mvc:resources mapping="/app/statics/**" location="/app/statics/" />
 	
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" p:defaultEncoding="utf-8"/>

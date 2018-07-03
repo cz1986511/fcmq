@@ -22,7 +22,10 @@
 		  classpath*:config/spring-mybatis.xml,
 		  classpath*:config/core-config.xml,
 		  classpath*:config/service-config.xml,
-		  classpath*:config/quartz-config.xml
+		  classpath*:META-INF/cxf/cxf.xml,
+		  classpath*:META-INF/cxf/cxf-extension-soap.xml,
+		  classpath*:META-INF/cxf/cxf-servlet.xml,
+		  classpath*:config/springwebservice-config.xml
 		</param-value>
 	</context-param>
 	
@@ -65,9 +68,22 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name>springMvc</servlet-name>
-		<url-pattern>/*</url-pattern>
+	    <servlet-name>springMvc</servlet-name>
+	    <url-pattern>/*</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	    <servlet-name>cxfServlet</servlet-name>
+	    <servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+	    <load-on-startup>2</load-on-startup>
+	  </servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>cxfServlet</servlet-name>
+	    <url-pattern>/webservice/*</url-pattern>
 	</servlet-mapping>
 
 	<welcome-file-list>

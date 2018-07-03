@@ -47,6 +47,15 @@
 			<artifactId>commons-fileupload</artifactId>
 		</dependency>
 		<dependency>
+	            <groupId>org.apache.cxf</groupId>
+	            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+	        </dependency>
+		    <dependency>
+		        <groupId>org.apache.cxf</groupId>
+		        <artifactId>cxf-rt-transports-http</artifactId>
+		        <type>jar</type>
+		    </dependency>
+		<dependency>
 		    <groupId>org.dom4j</groupId>
 		    <artifactId>dom4j</artifactId>
 		</dependency>
