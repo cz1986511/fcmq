@@ -26,11 +26,6 @@
 	<!-- 注解扫描 -->
 	<context:component-scan base-package="com.fc.web.webservice" />
 	
-	<!--
-	<import resource="classpath*:META-INF/cxf/cxf.xml" />
-	<import resource="classpath*:META-INF/cxf/cxf-extension-soap.xml" />
-    <import resource="classpath*:META-INF/cxf/cxf-servlet.xml" />
-    -->
     <!-- id=hello对应webservice的servicename,implementor对应bean名称，address为发布地址 -->
     <jaxws:endpoint id="hello" implementor="#helloClass" address="/webserviceHello"></jaxws:endpoint>
 
