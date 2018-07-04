@@ -8,6 +8,6 @@ import javax.jws.WebService;
 public interface HelloWord
 {
     @WebMethod
-    public String sayHi(@WebParam(name = "name") String name);
+    public String sayHi(@WebParam(name = "inputXMLString") String inputXMLString);
 
 }
