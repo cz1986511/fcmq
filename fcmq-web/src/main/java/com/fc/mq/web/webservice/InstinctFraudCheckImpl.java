@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@WebService(endpointInterface = "com.fc.web.webservice.InstinctFraudCheck", serviceName = "insCheck")
+@WebService(endpointInterface = "com.fc.mq.web.webservice.InstinctFraudCheck", serviceName = "insCheck")
 @Component("insCheckClass")
 public class InstinctFraudCheckImpl implements InstinctFraudCheck
 {
@@ -32,17 +32,28 @@ public class InstinctFraudCheckImpl implements InstinctFraudCheck
         }
         else
         {
-            Document document = null;
             try
             {
-                document = DocumentHelper.parseText(inputXMLString);
+                Document document = DocumentHelper.parseText(inputXMLString);
+                if (null != document)
+                {
+                    Node loanId = document
+                        .selectSingleNode("ApplicationSchema/Application/Loan/Loan_Id");
+                    if (null != loanId && !StringUtils.isBlank(loanId.getText()))
+                    {
+                        System.out.println(loanId.getText());
+                        result = makeResult("0");
+                    }
+                    else
+                    {
+                        result = makeResult("1");
+                    }
+                }
             }
             catch (Exception e)
             {
                 log.error("getInsCheckResult is Exception:" + e.toString());
             }
-            Node request = document.selectSingleNode("request").selectSingleNode("reqtype");
-            result = makeResult("0");
         }
         return result;
     }

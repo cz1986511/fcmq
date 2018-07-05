@@ -2,6 +2,8 @@ package com.fc.mq.web.webservice;
 
 import java.io.InputStream;
 
+import org.apache.commons.lang.StringUtils;
+import org.dom4j.Document;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,37 +11,56 @@ public class InstinctFraudCheckRunnable implements Runnable
 {
     private Logger log = LoggerFactory.getLogger(InstinctFraudCheckRunnable.class);
     private InstinctFraudCheckService instinctFraudCheckService;
+    private Document document;
+    private String loanId;
 
-    public InstinctFraudCheckRunnable(InstinctFraudCheckService instinctFraudCheckService)
+    public InstinctFraudCheckRunnable(InstinctFraudCheckService instinctFraudCheckService,
+                                      Document document, String loanId)
     {
         this.instinctFraudCheckService = instinctFraudCheckService;
+        this.document = document;
+        this.loanId = loanId;
     }
 
     @Override
     public void run()
     {
-        int exitVaule = callShell();
-        if (0 == exitVaule)
+        try
         {
-            String inputXmlString = "";
-            instinctFraudCheckService.getInstinctFraudCheckResult(inputXmlString);
+            if (null != this.document && !StringUtils.isBlank(this.loanId))
+            {
+                int exitVaule = callShell(this.loanId);
+                if (0 == exitVaule)
+                {
+                    String inputXmlString = "";
+                    String insResult = instinctFraudCheckService
+                        .getInstinctFraudCheckResult(inputXmlString);
+                    if (!StringUtils.isBlank(insResult))
+                    {
+                    }
+                }
+            }
         }
+        catch (Exception e)
+        {
+            log.error("InstinctFraudCheckRunnable is Exception:" + e.toString());
+        }
+
     }
 
-    private int callShell()
+    private int callShell(String loanId)
     {
         int result = 1;
         String shellString = "/data/sh/test.sh";
-        String args = "";
         try
         {
-            String cmd = "sh " + shellString + " " + args;
+            String cmd = "sh " + shellString + " " + loanId;
             Process process = Runtime.getRuntime().exec(cmd);
             result = process.waitFor();
         }
         catch (Exception e)
         {
-            log.error("InstinctFraudCheckRunnable is Exception:" + e.toString());
+            log.error("callShell is Exception:" + e.toString());
         }
         return result;
     }
@@ -59,7 +80,6 @@ public class InstinctFraudCheckRunnable implements Runnable
         }
         catch (Exception e)
         {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

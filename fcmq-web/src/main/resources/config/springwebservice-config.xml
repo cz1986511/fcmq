@@ -25,7 +25,7 @@
 
 	<bean id="InstinctFraudCheckService" class="com.fc.mq.web.webservice.InstinctFraudCheckServiceImpl" />
 	<!-- 注解扫描 -->
-	<context:component-scan base-package="com.fc.web.webservice" />
+	<context:component-scan base-package="com.fc.mq.web.webservice" />
 	
     <!-- id=insCheck对应webservice的servicename,implementor对应bean名称，address为发布地址 -->
     <jaxws:endpoint id="insCheck" implementor="#insCheckClass" address="/instinctCheck"></jaxws:endpoint>
