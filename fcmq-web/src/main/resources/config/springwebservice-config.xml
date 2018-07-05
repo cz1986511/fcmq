@@ -23,10 +23,11 @@
 	                    http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
 	                    http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd">
 
+	<bean id="InstinctFraudCheckService" class="com.fc.mq.web.webservice.InstinctFraudCheckServiceImpl" />
 	<!-- 注解扫描 -->
 	<context:component-scan base-package="com.fc.web.webservice" />
 	
-    <!-- id=hello对应webservice的servicename,implementor对应bean名称，address为发布地址 -->
-    <jaxws:endpoint id="hello" implementor="#helloClass" address="/webserviceHello"></jaxws:endpoint>
-
+    <!-- id=insCheck对应webservice的servicename,implementor对应bean名称，address为发布地址 -->
+    <jaxws:endpoint id="insCheck" implementor="#insCheckClass" address="/instinctCheck"></jaxws:endpoint>
+    
 </beans>

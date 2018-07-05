@@ -1,4 +1,4 @@
-package com.fc.web.base;
+package com.fc.mq.web.base;
 
 public class CommonBase
 {

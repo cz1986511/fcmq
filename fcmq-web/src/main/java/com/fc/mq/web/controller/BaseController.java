@@ -7,7 +7,7 @@
  * @date:		2017年12月28日 下午4:15:37 
  * @version:	V1.0   
  */
-package com.fc.web.controller;
+package com.fc.mq.web.controller;
 
 import javax.servlet.http.HttpServletRequest;
 

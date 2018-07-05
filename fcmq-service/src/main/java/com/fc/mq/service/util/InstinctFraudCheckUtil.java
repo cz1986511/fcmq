@@ -1,27 +1,8 @@
-package com.fc.web.webservice;
+package com.fc.mq.service.util;
 
-import javax.jws.WebService;
-
-import org.springframework.stereotype.Component;
-
-@WebService(endpointInterface = "com.fc.web.webservice.HelloWord", serviceName = "hello")
-@Component("helloClass")
-public class HelloWordImpl implements HelloWord
+public class InstinctFraudCheckUtil
 {
-
-    @Override
-    public String sayHi(String inputXMLString)
-    {
-        String outStringResult = "hello word" + inputXMLString;
-        return outStringResult;
-    }
-
-    private void parseXml(String inputXMLString)
-    {
-
-    }
-
-    private StringBuilder makeU2BXml()
+    public static StringBuilder makeU2BXml()
     {
         StringBuilder xmlParams = new StringBuilder();
         xmlParams.append("<U2B>");
@@ -35,7 +16,7 @@ public class HelloWordImpl implements HelloWord
         return xmlParams;
     }
 
-    private StringBuilder makeU2CXml()
+    public static StringBuilder makeU2CXml()
     {
         StringBuilder xmlParams = new StringBuilder();
         xmlParams.append("<U2C>");
@@ -49,7 +30,7 @@ public class HelloWordImpl implements HelloWord
         return xmlParams;
     }
 
-    private StringBuilder makeCBBXml()
+    public static StringBuilder makeCBBXml()
     {
         StringBuilder xmlParams = new StringBuilder();
         xmlParams.append("<CBB>");
@@ -71,7 +52,7 @@ public class HelloWordImpl implements HelloWord
         return xmlParams;
     }
 
-    private StringBuilder makeCBAXml()
+    public static StringBuilder makeCBAXml()
     {
         StringBuilder xmlParams = new StringBuilder();
         xmlParams.append("<CBA>");
