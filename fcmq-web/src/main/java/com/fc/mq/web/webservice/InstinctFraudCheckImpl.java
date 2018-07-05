@@ -5,6 +5,7 @@ import javax.jws.WebService;
 import org.apache.commons.lang.StringUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 import org.dom4j.Node;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +25,7 @@ public class InstinctFraudCheckImpl implements InstinctFraudCheck
     public String getInsCheckResult(String inputXMLString)
     {
 
-        System.out.println(inputXMLString);
+        // System.out.println(inputXMLString);
         String result = "";
         if (StringUtils.isBlank(inputXMLString))
         {
@@ -41,7 +42,12 @@ public class InstinctFraudCheckImpl implements InstinctFraudCheck
                         .selectSingleNode("ApplicationSchema/Application/Loan/Loan_Id");
                     if (null != loanId && !StringUtils.isBlank(loanId.getText()))
                     {
-                        System.out.println(loanId.getText());
+                        Element testEntity = DocumentHelper.createElement("Test");
+                        testEntity.addEntity("Test_Id", "111111");
+                        Element applicationElement = document.getRootElement().element(
+                            "Application");
+                        applicationElement.add(testEntity);
+                        System.out.println(applicationElement.asXML());
                         result = makeResult("0");
                     }
                     else

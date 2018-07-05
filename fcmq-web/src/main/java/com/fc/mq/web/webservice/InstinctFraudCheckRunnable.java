@@ -4,6 +4,8 @@ import java.io.InputStream;
 
 import org.apache.commons.lang.StringUtils;
 import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,11 +34,17 @@ public class InstinctFraudCheckRunnable implements Runnable
                 int exitVaule = callShell(this.loanId);
                 if (0 == exitVaule)
                 {
+                    Element applicationElement = document.getRootElement().element("Application");
+
                     String inputXmlString = "";
                     String insResult = instinctFraudCheckService
                         .getInstinctFraudCheckResult(inputXmlString);
                     if (!StringUtils.isBlank(insResult))
                     {
+                        Element testEntity = DocumentHelper.createElement("Test");
+                        testEntity.addEntity("Test_Id", "123456");
+                        document.add(testEntity);
+
                     }
                 }
             }
