@@ -37,6 +37,18 @@
     <result column="user_field4" property="userField4" jdbcType="VARCHAR" />
     <result column="user_field5" property="userField5" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List" >
+      row_id, created, created_by, last_upd, last_upd_by, modification_num, 
+      conflict_id, db_last_upd, user_field17, user_field18, user_field19, user_field20, user_field21, user_field22, user_field23, 
+      user_field24, user_field25, user_field26, company_name, complete_flg, db_last_upd_src, home_address1, home_address2, home_address3, 
+      home_address4, home_address5, home_address6, loan_id, surname, user_field1, user_field2, user_field3, user_field4, user_field5
+  </sql>
+  <select id="selectByLoanId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from cx_ins_cba
+    where loan_id = #{loanId,jdbcType=VARCHAR}
+  </select>
   <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsCba" >
     insert into cx_ins_cba (row_id, created, created_by, 
       last_upd, last_upd_by, modification_num, 

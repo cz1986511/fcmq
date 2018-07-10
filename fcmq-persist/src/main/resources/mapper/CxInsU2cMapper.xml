@@ -64,7 +64,108 @@
     <result column="pan_no" property="panNo" jdbcType="VARCHAR" />
     <result column="report_id" property="reportId" jdbcType="VARCHAR" />
     <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="user_field1" property="userField1" jdbcType="VARCHAR" />
+    <result column="user_field2" property="userField2" jdbcType="VARCHAR" />
+    <result column="user_field3" property="userField3" jdbcType="VARCHAR" />
+    <result column="user_field4" property="userField4" jdbcType="VARCHAR" />
+    <result column="user_field5" property="userField5" jdbcType="VARCHAR" />
+    <result column="user_field6" property="userField6" jdbcType="VARCHAR" />
+    <result column="user_field7" property="userField7" jdbcType="VARCHAR" />
+    <result column="user_field8" property="userField8" jdbcType="VARCHAR" />
+    <result column="user_field9" property="userField9" jdbcType="VARCHAR" />
+    <result column="user_field10" property="userField10" jdbcType="VARCHAR" />
+    <result column="user_field11" property="userField11" jdbcType="VARCHAR" />
+    <result column="user_field12" property="userField12" jdbcType="VARCHAR" />
+    <result column="user_field13" property="userField13" jdbcType="VARCHAR" />
+    <result column="user_field14" property="userField14" jdbcType="VARCHAR" />
+    <result column="user_field15" property="userField15" jdbcType="VARCHAR" />
+    <result column="user_field16" property="userField16" jdbcType="VARCHAR" />
+    <result column="user_field17" property="userField17" jdbcType="VARCHAR" />
+    <result column="user_field18" property="userField18" jdbcType="VARCHAR" />
+    <result column="user_field19" property="userField19" jdbcType="VARCHAR" />
+    <result column="user_field20" property="userField20" jdbcType="VARCHAR" />
+    <result column="user_field21" property="userField21" jdbcType="VARCHAR" />
+    <result column="user_field22" property="userField22" jdbcType="VARCHAR" />
+    <result column="user_field23" property="userField23" jdbcType="DECIMAL" />
+    <result column="user_field24" property="userField24" jdbcType="VARCHAR" />
+    <result column="user_field25" property="userField25" jdbcType="DECIMAL" />
+    <result column="user_field26" property="userField26" jdbcType="DECIMAL" />
+    <result column="user_field27" property="userField27" jdbcType="DECIMAL" />
+    <result column="user_field28" property="userField28" jdbcType="DECIMAL" />
+    <result column="user_field29" property="userField29" jdbcType="DECIMAL" />
+    <result column="user_field30" property="userField30" jdbcType="VARCHAR" />
+    <result column="user_field31" property="userField31" jdbcType="VARCHAR" />
+    <result column="user_field32" property="userField32" jdbcType="VARCHAR" />
+    <result column="user_field33" property="userField33" jdbcType="DECIMAL" />
+    <result column="user_field34" property="userField34" jdbcType="VARCHAR" />
+    <result column="user_field35" property="userField35" jdbcType="DECIMAL" />
+    <result column="user_field36" property="userField36" jdbcType="VARCHAR" />
+    <result column="user_field37" property="userField37" jdbcType="VARCHAR" />
+    <result column="user_field38" property="userField38" jdbcType="VARCHAR" />
+    <result column="user_field39" property="userField39" jdbcType="VARCHAR" />
+    <result column="user_field40" property="userField40" jdbcType="VARCHAR" />
+    <result column="user_field41" property="userField41" jdbcType="VARCHAR" />
+    <result column="user_field42" property="userField42" jdbcType="VARCHAR" />
+    <result column="user_field43" property="userField43" jdbcType="VARCHAR" />
+    <result column="user_field44" property="userField44" jdbcType="VARCHAR" />
+    <result column="user_field45" property="userField45" jdbcType="VARCHAR" />
+    <result column="user_field46" property="userField46" jdbcType="VARCHAR" />
+    <result column="user_field47" property="userField47" jdbcType="VARCHAR" />
+    <result column="user_field48" property="userField48" jdbcType="VARCHAR" />
+    <result column="user_field49" property="userField49" jdbcType="VARCHAR" />
+    <result column="user_field50" property="userField50" jdbcType="VARCHAR" />
+    <result column="user_field51" property="userField51" jdbcType="VARCHAR" />
+    <result column="user_field52" property="userField52" jdbcType="VARCHAR" />
+    <result column="user_field53" property="userField53" jdbcType="VARCHAR" />
+    <result column="user_field54" property="userField54" jdbcType="VARCHAR" />
+    <result column="user_field55" property="userField55" jdbcType="VARCHAR" />
+    <result column="user_field56" property="userField56" jdbcType="VARCHAR" />
+    <result column="user_field57" property="userField57" jdbcType="VARCHAR" />
+    <result column="user_field58" property="userField58" jdbcType="VARCHAR" />
+    <result column="user_field59" property="userField59" jdbcType="VARCHAR" />
+    <result column="user_field60" property="userField60" jdbcType="VARCHAR" />
+    <result column="user_field61" property="userField61" jdbcType="VARCHAR" />
+    <result column="user_field62" property="userField62" jdbcType="VARCHAR" />
+    <result column="user_field63" property="userField63" jdbcType="VARCHAR" />
+    <result column="user_field64" property="userField64" jdbcType="VARCHAR" />
+    <result column="user_field65" property="userField65" jdbcType="VARCHAR" />
+    <result column="user_field66" property="userField66" jdbcType="VARCHAR" />
+    <result column="user_field67" property="userField67" jdbcType="VARCHAR" />
+    <result column="user_field68" property="userField68" jdbcType="VARCHAR" />
+    <result column="user_field69" property="userField69" jdbcType="VARCHAR" />
+    <result column="user_field70" property="userField70" jdbcType="VARCHAR" />
+    <result column="user_field71" property="userField71" jdbcType="VARCHAR" />
+    <result column="user_field72" property="userField73" jdbcType="VARCHAR" />
+    <result column="user_field73" property="userField73" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List" >
+      row_id, created, last_upd, 
+      last_upd_by, modification_num, conflict_id, db_last_upd, db_last_upd_src, user_field146, 
+      user_field147, user_field148, user_field149, user_field150, user_field151, user_field152, 
+      user_field153, user_field154, user_field155, user_field156, user_field157, user_field158, 
+      user_field159, user_field160, user_field166, user_field167, user_field168, user_field171, 
+      user_field172, user_field173, user_field174, user_field175, user_field74, user_field75, 
+      user_field76, user_field77, user_field78, user_field79, user_field80, user_field81, 
+      user_field82, user_field83, user_field84, user_field85, user_field86, user_field87, 
+      user_field88, user_field89, user_field90, user_field91, user_field92, user_field93, 
+      user_field94, user_field95, user_field96, user_field97, user_field98, user_field99, loan_id, name, pan_no, 
+      report_id, category,user_field1,user_field2,user_field3,user_field4,user_field5,
+      user_field6,user_field7,user_field8,user_field9,user_field10,user_field11,user_field12,user_field13,
+      user_field14,user_field15,user_field16,user_field17,user_field18,user_field19,user_field20,user_field21,
+      1user_field22,user_field23,user_field24,user_field25,user_field26,user_field27,user_field28,user_field29,
+      user_field30,user_field31,user_field32,user_field33,user_field34,user_field35,user_field36,user_field37,
+      user_field38,user_field39,user_field40,user_field41,user_field42,user_field43,user_field44,user_field45,
+      user_field46,user_field47,user_field48,user_field49,user_field50,user_field51,user_field52,user_field53,
+      user_field54,user_field55,user_field56,user_field57,user_field58,user_field59,user_field60,user_field61,
+      user_field62,user_field63,user_field64,user_field65,user_field66,user_field67,user_field68,user_field69,
+      user_field70,user_field71,user_field72,user_field73
+  </sql>
+  <select id="selectByLoanId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from cx_ins_u2c
+    where loan_id = #{loanId,jdbcType=VARCHAR}
+  </select>
   <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsU2c" >
     insert into cx_ins_u2c (row_id, created, last_upd, 
       last_upd_by, modification_num, conflict_id, 

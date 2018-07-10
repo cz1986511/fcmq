@@ -18,6 +18,17 @@
     <result column="loan_id" property="loanId" jdbcType="VARCHAR" />
     <result column="user_field1" property="userField1" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List" >
+      row_id, created, created_by, last_upd, last_upd_by, modification_num, 
+      conflict_id, db_last_upd, user_field36, user_field37, user_field38, complete_flg, 
+      db_last_upd_src, loan_id, user_field1
+  </sql>
+  <select id="selectByLoanId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from cx_ins_u2b
+    where loan_id = #{loanId,jdbcType=VARCHAR}
+  </select>
   <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsU2b" >
     insert into cx_ins_u2b (row_id, created, created_by, 
       last_upd, last_upd_by, modification_num, 

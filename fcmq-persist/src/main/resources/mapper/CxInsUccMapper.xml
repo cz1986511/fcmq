@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.fc.mq.persist.mapper.CxInsUccMapper" >
   <resultMap id="BaseResultMap" type="com.fc.mq.persist.base.CxInsUcc" >
-    <id column="row_id" property="rowId" jdbcType="INTEGER" />
+    <id column="row_id" property="rowId" jdbcType="VARCHAR" />
     <result column="created" property="created" jdbcType="TIMESTAMP" />
     <result column="created_by" property="createdBy" jdbcType="VARCHAR" />
     <result column="last_upd" property="lastUpd" jdbcType="TIMESTAMP" />
@@ -23,16 +23,12 @@
     db_last_upd, user_field3, user_field4, complete_flg, db_last_upd_src, home_phone_number, 
     loan_id, surname
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByLoanId" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from cx_ins_ucc
-    where row_id = #{rowId,jdbcType=INTEGER}
+    where loan_id = #{loanId,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from cx_ins_ucc
-    where row_id = #{rowId,jdbcType=INTEGER}
-  </delete>
   <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsUcc" >
     insert into cx_ins_ucc (row_id, created, created_by, 
       last_upd, last_upd_by, modification_num, 
@@ -40,7 +36,7 @@
       user_field4, complete_flg, db_last_upd_src, 
       home_phone_number, loan_id, surname
       )
-    values (#{rowId,jdbcType=INTEGER}, #{created,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=VARCHAR}, 
+    values (#{rowId,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=VARCHAR}, 
       #{lastUpd,jdbcType=TIMESTAMP}, #{lastUpdBy,jdbcType=VARCHAR}, #{modificationNum,jdbcType=BIGINT}, 
       #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{userField3,jdbcType=DECIMAL}, 
       #{userField4,jdbcType=DECIMAL}, #{completeFlg,jdbcType=VARCHAR}, #{dbLastUpdSrc,jdbcType=VARCHAR}, 
@@ -98,7 +94,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="rowId != null" >
-        #{rowId,jdbcType=INTEGER},
+        #{rowId,jdbcType=VARCHAR},
       </if>
       <if test="created != null" >
         #{created,jdbcType=TIMESTAMP},
@@ -190,7 +186,7 @@
         surname = #{surname,jdbcType=VARCHAR},
       </if>
     </set>
-    where row_id = #{rowId,jdbcType=INTEGER}
+    where row_id = #{rowId,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.fc.mq.persist.base.CxInsUcc" >
     update cx_ins_ucc
@@ -208,6 +204,6 @@
       home_phone_number = #{homePhoneNumber,jdbcType=VARCHAR},
       loan_id = #{loanId,jdbcType=VARCHAR},
       surname = #{surname,jdbcType=VARCHAR}
-    where row_id = #{rowId,jdbcType=INTEGER}
+    where row_id = #{rowId,jdbcType=VARCHAR}
   </update>
 </mapper>

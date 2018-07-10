@@ -23,6 +23,18 @@
     <result column="user_field1" property="userField1" jdbcType="DECIMAL" />
     <result column="user_field21" property="userField21" jdbcType="TIMESTAMP" />
   </resultMap>
+  <sql id="Base_Column_List" >
+      row_id, created, created_by, last_upd, last_upd_by, modification_num, 
+      conflict_id, db_last_upd, db_last_upd_src, loan_id, category, surname, 
+      home_address1, home_address2, home_address3, home_postcode, home_phone_number, mobile_phone_number, 
+      user_field1, user_field21
+  </sql>
+  <select id="selectByLoanId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from cx_ins_cbb
+    where loan_id = #{loanId,jdbcType=VARCHAR}
+  </select>
   <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsCbb" >
     insert into cx_ins_cbb (row_id, created, created_by, 
       last_upd, last_upd_by, modification_num, 
