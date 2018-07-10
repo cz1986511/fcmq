@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fc.mq.persist.mapper.CxInsU2bMapper" >
+  <resultMap id="BaseResultMap" type="com.fc.mq.persist.base.CxInsU2b" >
+    <result column="row_id" property="rowId" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="created_by" property="createdBy" jdbcType="VARCHAR" />
+    <result column="last_upd" property="lastUpd" jdbcType="TIMESTAMP" />
+    <result column="last_upd_by" property="lastUpdBy" jdbcType="VARCHAR" />
+    <result column="modification_num" property="modificationNum" jdbcType="BIGINT" />
+    <result column="conflict_id" property="conflictId" jdbcType="VARCHAR" />
+    <result column="db_last_upd" property="dbLastUpd" jdbcType="TIMESTAMP" />
+    <result column="user_field36" property="userField36" jdbcType="DECIMAL" />
+    <result column="user_field37" property="userField37" jdbcType="DECIMAL" />
+    <result column="user_field38" property="userField38" jdbcType="DECIMAL" />
+    <result column="complete_flg" property="completeFlg" jdbcType="VARCHAR" />
+    <result column="db_last_upd_src" property="dbLastUpdSrc" jdbcType="VARCHAR" />
+    <result column="loan_id" property="loanId" jdbcType="VARCHAR" />
+    <result column="user_field1" property="userField1" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsU2b" >
+    insert into cx_ins_u2b (row_id, created, created_by, 
+      last_upd, last_upd_by, modification_num, 
+      conflict_id, db_last_upd, user_field36, 
+      user_field37, user_field38, complete_flg, 
+      db_last_upd_src, loan_id, user_field1
+      )
+    values (#{rowId,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=VARCHAR}, 
+      #{lastUpd,jdbcType=TIMESTAMP}, #{lastUpdBy,jdbcType=VARCHAR}, #{modificationNum,jdbcType=BIGINT}, 
+      #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{userField36,jdbcType=DECIMAL}, 
+      #{userField37,jdbcType=DECIMAL}, #{userField38,jdbcType=DECIMAL}, #{completeFlg,jdbcType=VARCHAR}, 
+      #{dbLastUpdSrc,jdbcType=VARCHAR}, #{loanId,jdbcType=VARCHAR}, #{userField1,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.fc.mq.persist.base.CxInsU2b" >
+    insert into cx_ins_u2b
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        row_id,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="createdBy != null" >
+        created_by,
+      </if>
+      <if test="lastUpd != null" >
+        last_upd,
+      </if>
+      <if test="lastUpdBy != null" >
+        last_upd_by,
+      </if>
+      <if test="modificationNum != null" >
+        modification_num,
+      </if>
+      <if test="conflictId != null" >
+        conflict_id,
+      </if>
+      <if test="dbLastUpd != null" >
+        db_last_upd,
+      </if>
+      <if test="userField36 != null" >
+        user_field36,
+      </if>
+      <if test="userField37 != null" >
+        user_field37,
+      </if>
+      <if test="userField38 != null" >
+        user_field38,
+      </if>
+      <if test="completeFlg != null" >
+        complete_flg,
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        db_last_upd_src,
+      </if>
+      <if test="loanId != null" >
+        loan_id,
+      </if>
+      <if test="userField1 != null" >
+        user_field1,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        #{rowId,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpd != null" >
+        #{lastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdBy != null" >
+        #{lastUpdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="modificationNum != null" >
+        #{modificationNum,jdbcType=BIGINT},
+      </if>
+      <if test="conflictId != null" >
+        #{conflictId,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpd != null" >
+        #{dbLastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userField36 != null" >
+        #{userField36,jdbcType=DECIMAL},
+      </if>
+      <if test="userField37 != null" >
+        #{userField37,jdbcType=DECIMAL},
+      </if>
+      <if test="userField38 != null" >
+        #{userField38,jdbcType=DECIMAL},
+      </if>
+      <if test="completeFlg != null" >
+        #{completeFlg,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        #{dbLastUpdSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="loanId != null" >
+        #{loanId,jdbcType=VARCHAR},
+      </if>
+      <if test="userField1 != null" >
+        #{userField1,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

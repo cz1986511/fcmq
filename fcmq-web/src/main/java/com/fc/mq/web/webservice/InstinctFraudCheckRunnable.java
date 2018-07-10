@@ -44,7 +44,6 @@ public class InstinctFraudCheckRunnable implements Runnable
                         Element testEntity = DocumentHelper.createElement("Test");
                         testEntity.addEntity("Test_Id", "123456");
                         document.add(testEntity);
-
                     }
                 }
             }

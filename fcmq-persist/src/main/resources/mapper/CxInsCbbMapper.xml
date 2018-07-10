@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fc.mq.persist.mapper.CxInsCbbMapper" >
+  <resultMap id="BaseResultMap" type="com.fc.mq.persist.base.CxInsCbb" >
+    <result column="row_id" property="rowId" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="created_by" property="createdBy" jdbcType="VARCHAR" />
+    <result column="last_upd" property="lastUpd" jdbcType="TIMESTAMP" />
+    <result column="last_upd_by" property="lastUpdBy" jdbcType="VARCHAR" />
+    <result column="modification_num" property="modificationNum" jdbcType="BIGINT" />
+    <result column="conflict_id" property="conflictId" jdbcType="VARCHAR" />
+    <result column="db_last_upd" property="dbLastUpd" jdbcType="TIMESTAMP" />
+    <result column="db_last_upd_src" property="dbLastUpdSrc" jdbcType="VARCHAR" />
+    <result column="loan_id" property="loanId" jdbcType="VARCHAR" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+    <result column="surname" property="surname" jdbcType="VARCHAR" />
+    <result column="home_address1" property="homeAddress1" jdbcType="VARCHAR" />
+    <result column="home_address2" property="homeAddress2" jdbcType="VARCHAR" />
+    <result column="home_address3" property="homeAddress3" jdbcType="VARCHAR" />
+    <result column="home_postcode" property="homePostcode" jdbcType="VARCHAR" />
+    <result column="home_phone_number" property="homePhoneNumber" jdbcType="VARCHAR" />
+    <result column="mobile_phone_number" property="mobilePhoneNumber" jdbcType="VARCHAR" />
+    <result column="user_field1" property="userField1" jdbcType="DECIMAL" />
+    <result column="user_field21" property="userField21" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsCbb" >
+    insert into cx_ins_cbb (row_id, created, created_by, 
+      last_upd, last_upd_by, modification_num, 
+      conflict_id, db_last_upd, db_last_upd_src, 
+      loan_id, category, surname, 
+      home_address1, home_address2, home_address3, 
+      home_postcode, home_phone_number, mobile_phone_number, 
+      user_field1, user_field21)
+    values (#{rowId,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=VARCHAR}, 
+      #{lastUpd,jdbcType=TIMESTAMP}, #{lastUpdBy,jdbcType=VARCHAR}, #{modificationNum,jdbcType=BIGINT}, 
+      #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{dbLastUpdSrc,jdbcType=VARCHAR}, 
+      #{loanId,jdbcType=VARCHAR}, #{category,jdbcType=VARCHAR}, #{surname,jdbcType=VARCHAR}, 
+      #{homeAddress1,jdbcType=VARCHAR}, #{homeAddress2,jdbcType=VARCHAR}, #{homeAddress3,jdbcType=VARCHAR}, 
+      #{homePostcode,jdbcType=VARCHAR}, #{homePhoneNumber,jdbcType=VARCHAR}, #{mobilePhoneNumber,jdbcType=VARCHAR}, 
+      #{userField1,jdbcType=DECIMAL}, #{userField21,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fc.mq.persist.base.CxInsCbb" >
+    insert into cx_ins_cbb
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        row_id,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="createdBy != null" >
+        created_by,
+      </if>
+      <if test="lastUpd != null" >
+        last_upd,
+      </if>
+      <if test="lastUpdBy != null" >
+        last_upd_by,
+      </if>
+      <if test="modificationNum != null" >
+        modification_num,
+      </if>
+      <if test="conflictId != null" >
+        conflict_id,
+      </if>
+      <if test="dbLastUpd != null" >
+        db_last_upd,
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        db_last_upd_src,
+      </if>
+      <if test="loanId != null" >
+        loan_id,
+      </if>
+      <if test="category != null" >
+        category,
+      </if>
+      <if test="surname != null" >
+        surname,
+      </if>
+      <if test="homeAddress1 != null" >
+        home_address1,
+      </if>
+      <if test="homeAddress2 != null" >
+        home_address2,
+      </if>
+      <if test="homeAddress3 != null" >
+        home_address3,
+      </if>
+      <if test="homePostcode != null" >
+        home_postcode,
+      </if>
+      <if test="homePhoneNumber != null" >
+        home_phone_number,
+      </if>
+      <if test="mobilePhoneNumber != null" >
+        mobile_phone_number,
+      </if>
+      <if test="userField1 != null" >
+        user_field1,
+      </if>
+      <if test="userField21 != null" >
+        user_field21,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        #{rowId,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpd != null" >
+        #{lastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdBy != null" >
+        #{lastUpdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="modificationNum != null" >
+        #{modificationNum,jdbcType=BIGINT},
+      </if>
+      <if test="conflictId != null" >
+        #{conflictId,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpd != null" >
+        #{dbLastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        #{dbLastUpdSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="loanId != null" >
+        #{loanId,jdbcType=VARCHAR},
+      </if>
+      <if test="category != null" >
+        #{category,jdbcType=VARCHAR},
+      </if>
+      <if test="surname != null" >
+        #{surname,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress1 != null" >
+        #{homeAddress1,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress2 != null" >
+        #{homeAddress2,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress3 != null" >
+        #{homeAddress3,jdbcType=VARCHAR},
+      </if>
+      <if test="homePostcode != null" >
+        #{homePostcode,jdbcType=VARCHAR},
+      </if>
+      <if test="homePhoneNumber != null" >
+        #{homePhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilePhoneNumber != null" >
+        #{mobilePhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="userField1 != null" >
+        #{userField1,jdbcType=DECIMAL},
+      </if>
+      <if test="userField21 != null" >
+        #{userField21,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>

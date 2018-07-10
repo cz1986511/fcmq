@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fc.mq.persist.mapper.CxInsU2cMapper" >
+  <resultMap id="BaseResultMap" type="com.fc.mq.persist.base.CxInsU2c" >
+    <result column="row_id" property="rowId" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="last_upd" property="lastUpd" jdbcType="TIMESTAMP" />
+    <result column="last_upd_by" property="lastUpdBy" jdbcType="VARCHAR" />
+    <result column="modification_num" property="modificationNum" jdbcType="DECIMAL" />
+    <result column="conflict_id" property="conflictId" jdbcType="VARCHAR" />
+    <result column="db_last_upd" property="dbLastUpd" jdbcType="TIMESTAMP" />
+    <result column="db_last_upd_src" property="dbLastUpdSrc" jdbcType="VARCHAR" />
+    <result column="user_field146" property="userField146" jdbcType="VARCHAR" />
+    <result column="user_field147" property="userField147" jdbcType="VARCHAR" />
+    <result column="user_field148" property="userField148" jdbcType="VARCHAR" />
+    <result column="user_field149" property="userField149" jdbcType="VARCHAR" />
+    <result column="user_field150" property="userField150" jdbcType="VARCHAR" />
+    <result column="user_field151" property="userField151" jdbcType="VARCHAR" />
+    <result column="user_field152" property="userField152" jdbcType="VARCHAR" />
+    <result column="user_field153" property="userField153" jdbcType="VARCHAR" />
+    <result column="user_field154" property="userField154" jdbcType="VARCHAR" />
+    <result column="user_field155" property="userField155" jdbcType="VARCHAR" />
+    <result column="user_field156" property="userField156" jdbcType="VARCHAR" />
+    <result column="user_field157" property="userField157" jdbcType="DECIMAL" />
+    <result column="user_field158" property="userField158" jdbcType="DECIMAL" />
+    <result column="user_field159" property="userField159" jdbcType="DECIMAL" />
+    <result column="user_field160" property="userField160" jdbcType="TIMESTAMP" />
+    <result column="user_field166" property="userField166" jdbcType="DECIMAL" />
+    <result column="user_field167" property="userField167" jdbcType="DECIMAL" />
+    <result column="user_field168" property="userField168" jdbcType="VARCHAR" />
+    <result column="user_field171" property="userField171" jdbcType="VARCHAR" />
+    <result column="user_field172" property="userField172" jdbcType="DECIMAL" />
+    <result column="user_field173" property="userField173" jdbcType="VARCHAR" />
+    <result column="user_field174" property="userField174" jdbcType="DECIMAL" />
+    <result column="user_field175" property="userField175" jdbcType="VARCHAR" />
+    <result column="user_field74" property="userField74" jdbcType="VARCHAR" />
+    <result column="user_field75" property="userField75" jdbcType="VARCHAR" />
+    <result column="user_field76" property="userField76" jdbcType="VARCHAR" />
+    <result column="user_field77" property="userField77" jdbcType="VARCHAR" />
+    <result column="user_field78" property="userField78" jdbcType="VARCHAR" />
+    <result column="user_field79" property="userField79" jdbcType="VARCHAR" />
+    <result column="user_field80" property="userField80" jdbcType="VARCHAR" />
+    <result column="user_field81" property="userField81" jdbcType="VARCHAR" />
+    <result column="user_field82" property="userField82" jdbcType="VARCHAR" />
+    <result column="user_field83" property="userField83" jdbcType="VARCHAR" />
+    <result column="user_field84" property="userField84" jdbcType="VARCHAR" />
+    <result column="user_field85" property="userField85" jdbcType="VARCHAR" />
+    <result column="user_field86" property="userField86" jdbcType="VARCHAR" />
+    <result column="user_field87" property="userField87" jdbcType="VARCHAR" />
+    <result column="user_field88" property="userField88" jdbcType="VARCHAR" />
+    <result column="user_field89" property="userField89" jdbcType="VARCHAR" />
+    <result column="user_field90" property="userField90" jdbcType="VARCHAR" />
+    <result column="user_field91" property="userField91" jdbcType="VARCHAR" />
+    <result column="user_field92" property="userField92" jdbcType="VARCHAR" />
+    <result column="user_field93" property="userField93" jdbcType="VARCHAR" />
+    <result column="user_field94" property="userField94" jdbcType="VARCHAR" />
+    <result column="user_field95" property="userField95" jdbcType="VARCHAR" />
+    <result column="user_field96" property="userField96" jdbcType="VARCHAR" />
+    <result column="user_field97" property="userField97" jdbcType="VARCHAR" />
+    <result column="user_field98" property="userField98" jdbcType="VARCHAR" />
+    <result column="user_field99" property="userField99" jdbcType="VARCHAR" />
+    <result column="loan_id" property="loanId" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="pan_no" property="panNo" jdbcType="VARCHAR" />
+    <result column="report_id" property="reportId" jdbcType="VARCHAR" />
+    <result column="category" property="category" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsU2c" >
+    insert into cx_ins_u2c (row_id, created, last_upd, 
+      last_upd_by, modification_num, conflict_id, 
+      db_last_upd, db_last_upd_src, user_field146, 
+      user_field147, user_field148, user_field149, 
+      user_field150, user_field151, user_field152, 
+      user_field153, user_field154, user_field155, 
+      user_field156, user_field157, user_field158, 
+      user_field159, user_field160, user_field166, 
+      user_field167, user_field168, user_field171, 
+      user_field172, user_field173, user_field174, 
+      user_field175, user_field74, user_field75, 
+      user_field76, user_field77, user_field78, 
+      user_field79, user_field80, user_field81, 
+      user_field82, user_field83, user_field84, 
+      user_field85, user_field86, user_field87, 
+      user_field88, user_field89, user_field90, 
+      user_field91, user_field92, user_field93, 
+      user_field94, user_field95, user_field96, 
+      user_field97, user_field98, user_field99, 
+      loan_id, name, pan_no, 
+      report_id, category)
+    values (#{rowId,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{lastUpd,jdbcType=TIMESTAMP}, 
+      #{lastUpdBy,jdbcType=VARCHAR}, #{modificationNum,jdbcType=DECIMAL}, #{conflictId,jdbcType=VARCHAR}, 
+      #{dbLastUpd,jdbcType=TIMESTAMP}, #{dbLastUpdSrc,jdbcType=VARCHAR}, #{userField146,jdbcType=VARCHAR}, 
+      #{userField147,jdbcType=VARCHAR}, #{userField148,jdbcType=VARCHAR}, #{userField149,jdbcType=VARCHAR}, 
+      #{userField150,jdbcType=VARCHAR}, #{userField151,jdbcType=VARCHAR}, #{userField152,jdbcType=VARCHAR}, 
+      #{userField153,jdbcType=VARCHAR}, #{userField154,jdbcType=VARCHAR}, #{userField155,jdbcType=VARCHAR}, 
+      #{userField156,jdbcType=VARCHAR}, #{userField157,jdbcType=DECIMAL}, #{userField158,jdbcType=DECIMAL}, 
+      #{userField159,jdbcType=DECIMAL}, #{userField160,jdbcType=TIMESTAMP}, #{userField166,jdbcType=DECIMAL}, 
+      #{userField167,jdbcType=DECIMAL}, #{userField168,jdbcType=VARCHAR}, #{userField171,jdbcType=VARCHAR}, 
+      #{userField172,jdbcType=DECIMAL}, #{userField173,jdbcType=VARCHAR}, #{userField174,jdbcType=DECIMAL}, 
+      #{userField175,jdbcType=VARCHAR}, #{userField74,jdbcType=VARCHAR}, #{userField75,jdbcType=VARCHAR}, 
+      #{userField76,jdbcType=VARCHAR}, #{userField77,jdbcType=VARCHAR}, #{userField78,jdbcType=VARCHAR}, 
+      #{userField79,jdbcType=VARCHAR}, #{userField80,jdbcType=VARCHAR}, #{userField81,jdbcType=VARCHAR}, 
+      #{userField82,jdbcType=VARCHAR}, #{userField83,jdbcType=VARCHAR}, #{userField84,jdbcType=VARCHAR}, 
+      #{userField85,jdbcType=VARCHAR}, #{userField86,jdbcType=VARCHAR}, #{userField87,jdbcType=VARCHAR}, 
+      #{userField88,jdbcType=VARCHAR}, #{userField89,jdbcType=VARCHAR}, #{userField90,jdbcType=VARCHAR}, 
+      #{userField91,jdbcType=VARCHAR}, #{userField92,jdbcType=VARCHAR}, #{userField93,jdbcType=VARCHAR}, 
+      #{userField94,jdbcType=VARCHAR}, #{userField95,jdbcType=VARCHAR}, #{userField96,jdbcType=VARCHAR}, 
+      #{userField97,jdbcType=VARCHAR}, #{userField98,jdbcType=VARCHAR}, #{userField99,jdbcType=VARCHAR}, 
+      #{loanId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{panNo,jdbcType=VARCHAR}, 
+      #{reportId,jdbcType=VARCHAR}, #{category,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fc.mq.persist.base.CxInsU2c" >
+    insert into cx_ins_u2c
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        row_id,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="lastUpd != null" >
+        last_upd,
+      </if>
+      <if test="lastUpdBy != null" >
+        last_upd_by,
+      </if>
+      <if test="modificationNum != null" >
+        modification_num,
+      </if>
+      <if test="conflictId != null" >
+        conflict_id,
+      </if>
+      <if test="dbLastUpd != null" >
+        db_last_upd,
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        db_last_upd_src,
+      </if>
+      <if test="userField146 != null" >
+        user_field146,
+      </if>
+      <if test="userField147 != null" >
+        user_field147,
+      </if>
+      <if test="userField148 != null" >
+        user_field148,
+      </if>
+      <if test="userField149 != null" >
+        user_field149,
+      </if>
+      <if test="userField150 != null" >
+        user_field150,
+      </if>
+      <if test="userField151 != null" >
+        user_field151,
+      </if>
+      <if test="userField152 != null" >
+        user_field152,
+      </if>
+      <if test="userField153 != null" >
+        user_field153,
+      </if>
+      <if test="userField154 != null" >
+        user_field154,
+      </if>
+      <if test="userField155 != null" >
+        user_field155,
+      </if>
+      <if test="userField156 != null" >
+        user_field156,
+      </if>
+      <if test="userField157 != null" >
+        user_field157,
+      </if>
+      <if test="userField158 != null" >
+        user_field158,
+      </if>
+      <if test="userField159 != null" >
+        user_field159,
+      </if>
+      <if test="userField160 != null" >
+        user_field160,
+      </if>
+      <if test="userField166 != null" >
+        user_field166,
+      </if>
+      <if test="userField167 != null" >
+        user_field167,
+      </if>
+      <if test="userField168 != null" >
+        user_field168,
+      </if>
+      <if test="userField171 != null" >
+        user_field171,
+      </if>
+      <if test="userField172 != null" >
+        user_field172,
+      </if>
+      <if test="userField173 != null" >
+        user_field173,
+      </if>
+      <if test="userField174 != null" >
+        user_field174,
+      </if>
+      <if test="userField175 != null" >
+        user_field175,
+      </if>
+      <if test="userField74 != null" >
+        user_field74,
+      </if>
+      <if test="userField75 != null" >
+        user_field75,
+      </if>
+      <if test="userField76 != null" >
+        user_field76,
+      </if>
+      <if test="userField77 != null" >
+        user_field77,
+      </if>
+      <if test="userField78 != null" >
+        user_field78,
+      </if>
+      <if test="userField79 != null" >
+        user_field79,
+      </if>
+      <if test="userField80 != null" >
+        user_field80,
+      </if>
+      <if test="userField81 != null" >
+        user_field81,
+      </if>
+      <if test="userField82 != null" >
+        user_field82,
+      </if>
+      <if test="userField83 != null" >
+        user_field83,
+      </if>
+      <if test="userField84 != null" >
+        user_field84,
+      </if>
+      <if test="userField85 != null" >
+        user_field85,
+      </if>
+      <if test="userField86 != null" >
+        user_field86,
+      </if>
+      <if test="userField87 != null" >
+        user_field87,
+      </if>
+      <if test="userField88 != null" >
+        user_field88,
+      </if>
+      <if test="userField89 != null" >
+        user_field89,
+      </if>
+      <if test="userField90 != null" >
+        user_field90,
+      </if>
+      <if test="userField91 != null" >
+        user_field91,
+      </if>
+      <if test="userField92 != null" >
+        user_field92,
+      </if>
+      <if test="userField93 != null" >
+        user_field93,
+      </if>
+      <if test="userField94 != null" >
+        user_field94,
+      </if>
+      <if test="userField95 != null" >
+        user_field95,
+      </if>
+      <if test="userField96 != null" >
+        user_field96,
+      </if>
+      <if test="userField97 != null" >
+        user_field97,
+      </if>
+      <if test="userField98 != null" >
+        user_field98,
+      </if>
+      <if test="userField99 != null" >
+        user_field99,
+      </if>
+      <if test="loanId != null" >
+        loan_id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="panNo != null" >
+        pan_no,
+      </if>
+      <if test="reportId != null" >
+        report_id,
+      </if>
+      <if test="category != null" >
+        category,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        #{rowId,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpd != null" >
+        #{lastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdBy != null" >
+        #{lastUpdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="modificationNum != null" >
+        #{modificationNum,jdbcType=DECIMAL},
+      </if>
+      <if test="conflictId != null" >
+        #{conflictId,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpd != null" >
+        #{dbLastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        #{dbLastUpdSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="userField146 != null" >
+        #{userField146,jdbcType=VARCHAR},
+      </if>
+      <if test="userField147 != null" >
+        #{userField147,jdbcType=VARCHAR},
+      </if>
+      <if test="userField148 != null" >
+        #{userField148,jdbcType=VARCHAR},
+      </if>
+      <if test="userField149 != null" >
+        #{userField149,jdbcType=VARCHAR},
+      </if>
+      <if test="userField150 != null" >
+        #{userField150,jdbcType=VARCHAR},
+      </if>
+      <if test="userField151 != null" >
+        #{userField151,jdbcType=VARCHAR},
+      </if>
+      <if test="userField152 != null" >
+        #{userField152,jdbcType=VARCHAR},
+      </if>
+      <if test="userField153 != null" >
+        #{userField153,jdbcType=VARCHAR},
+      </if>
+      <if test="userField154 != null" >
+        #{userField154,jdbcType=VARCHAR},
+      </if>
+      <if test="userField155 != null" >
+        #{userField155,jdbcType=VARCHAR},
+      </if>
+      <if test="userField156 != null" >
+        #{userField156,jdbcType=VARCHAR},
+      </if>
+      <if test="userField157 != null" >
+        #{userField157,jdbcType=DECIMAL},
+      </if>
+      <if test="userField158 != null" >
+        #{userField158,jdbcType=DECIMAL},
+      </if>
+      <if test="userField159 != null" >
+        #{userField159,jdbcType=DECIMAL},
+      </if>
+      <if test="userField160 != null" >
+        #{userField160,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userField166 != null" >
+        #{userField166,jdbcType=DECIMAL},
+      </if>
+      <if test="userField167 != null" >
+        #{userField167,jdbcType=DECIMAL},
+      </if>
+      <if test="userField168 != null" >
+        #{userField168,jdbcType=VARCHAR},
+      </if>
+      <if test="userField171 != null" >
+        #{userField171,jdbcType=VARCHAR},
+      </if>
+      <if test="userField172 != null" >
+        #{userField172,jdbcType=DECIMAL},
+      </if>
+      <if test="userField173 != null" >
+        #{userField173,jdbcType=VARCHAR},
+      </if>
+      <if test="userField174 != null" >
+        #{userField174,jdbcType=DECIMAL},
+      </if>
+      <if test="userField175 != null" >
+        #{userField175,jdbcType=VARCHAR},
+      </if>
+      <if test="userField74 != null" >
+        #{userField74,jdbcType=VARCHAR},
+      </if>
+      <if test="userField75 != null" >
+        #{userField75,jdbcType=VARCHAR},
+      </if>
+      <if test="userField76 != null" >
+        #{userField76,jdbcType=VARCHAR},
+      </if>
+      <if test="userField77 != null" >
+        #{userField77,jdbcType=VARCHAR},
+      </if>
+      <if test="userField78 != null" >
+        #{userField78,jdbcType=VARCHAR},
+      </if>
+      <if test="userField79 != null" >
+        #{userField79,jdbcType=VARCHAR},
+      </if>
+      <if test="userField80 != null" >
+        #{userField80,jdbcType=VARCHAR},
+      </if>
+      <if test="userField81 != null" >
+        #{userField81,jdbcType=VARCHAR},
+      </if>
+      <if test="userField82 != null" >
+        #{userField82,jdbcType=VARCHAR},
+      </if>
+      <if test="userField83 != null" >
+        #{userField83,jdbcType=VARCHAR},
+      </if>
+      <if test="userField84 != null" >
+        #{userField84,jdbcType=VARCHAR},
+      </if>
+      <if test="userField85 != null" >
+        #{userField85,jdbcType=VARCHAR},
+      </if>
+      <if test="userField86 != null" >
+        #{userField86,jdbcType=VARCHAR},
+      </if>
+      <if test="userField87 != null" >
+        #{userField87,jdbcType=VARCHAR},
+      </if>
+      <if test="userField88 != null" >
+        #{userField88,jdbcType=VARCHAR},
+      </if>
+      <if test="userField89 != null" >
+        #{userField89,jdbcType=VARCHAR},
+      </if>
+      <if test="userField90 != null" >
+        #{userField90,jdbcType=VARCHAR},
+      </if>
+      <if test="userField91 != null" >
+        #{userField91,jdbcType=VARCHAR},
+      </if>
+      <if test="userField92 != null" >
+        #{userField92,jdbcType=VARCHAR},
+      </if>
+      <if test="userField93 != null" >
+        #{userField93,jdbcType=VARCHAR},
+      </if>
+      <if test="userField94 != null" >
+        #{userField94,jdbcType=VARCHAR},
+      </if>
+      <if test="userField95 != null" >
+        #{userField95,jdbcType=VARCHAR},
+      </if>
+      <if test="userField96 != null" >
+        #{userField96,jdbcType=VARCHAR},
+      </if>
+      <if test="userField97 != null" >
+        #{userField97,jdbcType=VARCHAR},
+      </if>
+      <if test="userField98 != null" >
+        #{userField98,jdbcType=VARCHAR},
+      </if>
+      <if test="userField99 != null" >
+        #{userField99,jdbcType=VARCHAR},
+      </if>
+      <if test="loanId != null" >
+        #{loanId,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="panNo != null" >
+        #{panNo,jdbcType=VARCHAR},
+      </if>
+      <if test="reportId != null" >
+        #{reportId,jdbcType=VARCHAR},
+      </if>
+      <if test="category != null" >
+        #{category,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

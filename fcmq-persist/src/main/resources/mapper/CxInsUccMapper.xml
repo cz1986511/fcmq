@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fc.mq.persist.mapper.CxInsUccMapper" >
+  <resultMap id="BaseResultMap" type="com.fc.mq.persist.base.CxInsUcc" >
+    <id column="row_id" property="rowId" jdbcType="INTEGER" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="created_by" property="createdBy" jdbcType="VARCHAR" />
+    <result column="last_upd" property="lastUpd" jdbcType="TIMESTAMP" />
+    <result column="last_upd_by" property="lastUpdBy" jdbcType="VARCHAR" />
+    <result column="modification_num" property="modificationNum" jdbcType="BIGINT" />
+    <result column="conflict_id" property="conflictId" jdbcType="VARCHAR" />
+    <result column="db_last_upd" property="dbLastUpd" jdbcType="TIMESTAMP" />
+    <result column="user_field3" property="userField3" jdbcType="DECIMAL" />
+    <result column="user_field4" property="userField4" jdbcType="DECIMAL" />
+    <result column="complete_flg" property="completeFlg" jdbcType="VARCHAR" />
+    <result column="db_last_upd_src" property="dbLastUpdSrc" jdbcType="VARCHAR" />
+    <result column="home_phone_number" property="homePhoneNumber" jdbcType="VARCHAR" />
+    <result column="loan_id" property="loanId" jdbcType="VARCHAR" />
+    <result column="surname" property="surname" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    row_id, created, created_by, last_upd, last_upd_by, modification_num, conflict_id, 
+    db_last_upd, user_field3, user_field4, complete_flg, db_last_upd_src, home_phone_number, 
+    loan_id, surname
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from cx_ins_ucc
+    where row_id = #{rowId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from cx_ins_ucc
+    where row_id = #{rowId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsUcc" >
+    insert into cx_ins_ucc (row_id, created, created_by, 
+      last_upd, last_upd_by, modification_num, 
+      conflict_id, db_last_upd, user_field3, 
+      user_field4, complete_flg, db_last_upd_src, 
+      home_phone_number, loan_id, surname
+      )
+    values (#{rowId,jdbcType=INTEGER}, #{created,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=VARCHAR}, 
+      #{lastUpd,jdbcType=TIMESTAMP}, #{lastUpdBy,jdbcType=VARCHAR}, #{modificationNum,jdbcType=BIGINT}, 
+      #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{userField3,jdbcType=DECIMAL}, 
+      #{userField4,jdbcType=DECIMAL}, #{completeFlg,jdbcType=VARCHAR}, #{dbLastUpdSrc,jdbcType=VARCHAR}, 
+      #{homePhoneNumber,jdbcType=VARCHAR}, #{loanId,jdbcType=VARCHAR}, #{surname,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.fc.mq.persist.base.CxInsUcc" >
+    insert into cx_ins_ucc
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        row_id,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="createdBy != null" >
+        created_by,
+      </if>
+      <if test="lastUpd != null" >
+        last_upd,
+      </if>
+      <if test="lastUpdBy != null" >
+        last_upd_by,
+      </if>
+      <if test="modificationNum != null" >
+        modification_num,
+      </if>
+      <if test="conflictId != null" >
+        conflict_id,
+      </if>
+      <if test="dbLastUpd != null" >
+        db_last_upd,
+      </if>
+      <if test="userField3 != null" >
+        user_field3,
+      </if>
+      <if test="userField4 != null" >
+        user_field4,
+      </if>
+      <if test="completeFlg != null" >
+        complete_flg,
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        db_last_upd_src,
+      </if>
+      <if test="homePhoneNumber != null" >
+        home_phone_number,
+      </if>
+      <if test="loanId != null" >
+        loan_id,
+      </if>
+      <if test="surname != null" >
+        surname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        #{rowId,jdbcType=INTEGER},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpd != null" >
+        #{lastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdBy != null" >
+        #{lastUpdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="modificationNum != null" >
+        #{modificationNum,jdbcType=BIGINT},
+      </if>
+      <if test="conflictId != null" >
+        #{conflictId,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpd != null" >
+        #{dbLastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userField3 != null" >
+        #{userField3,jdbcType=DECIMAL},
+      </if>
+      <if test="userField4 != null" >
+        #{userField4,jdbcType=DECIMAL},
+      </if>
+      <if test="completeFlg != null" >
+        #{completeFlg,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        #{dbLastUpdSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="homePhoneNumber != null" >
+        #{homePhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="loanId != null" >
+        #{loanId,jdbcType=VARCHAR},
+      </if>
+      <if test="surname != null" >
+        #{surname,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.fc.mq.persist.base.CxInsUcc" >
+    update cx_ins_ucc
+    <set >
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdBy != null" >
+        created_by = #{createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpd != null" >
+        last_upd = #{lastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdBy != null" >
+        last_upd_by = #{lastUpdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="modificationNum != null" >
+        modification_num = #{modificationNum,jdbcType=BIGINT},
+      </if>
+      <if test="conflictId != null" >
+        conflict_id = #{conflictId,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpd != null" >
+        db_last_upd = #{dbLastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userField3 != null" >
+        user_field3 = #{userField3,jdbcType=DECIMAL},
+      </if>
+      <if test="userField4 != null" >
+        user_field4 = #{userField4,jdbcType=DECIMAL},
+      </if>
+      <if test="completeFlg != null" >
+        complete_flg = #{completeFlg,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        db_last_upd_src = #{dbLastUpdSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="homePhoneNumber != null" >
+        home_phone_number = #{homePhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="loanId != null" >
+        loan_id = #{loanId,jdbcType=VARCHAR},
+      </if>
+      <if test="surname != null" >
+        surname = #{surname,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where row_id = #{rowId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.fc.mq.persist.base.CxInsUcc" >
+    update cx_ins_ucc
+    set created = #{created,jdbcType=TIMESTAMP},
+      created_by = #{createdBy,jdbcType=VARCHAR},
+      last_upd = #{lastUpd,jdbcType=TIMESTAMP},
+      last_upd_by = #{lastUpdBy,jdbcType=VARCHAR},
+      modification_num = #{modificationNum,jdbcType=BIGINT},
+      conflict_id = #{conflictId,jdbcType=VARCHAR},
+      db_last_upd = #{dbLastUpd,jdbcType=TIMESTAMP},
+      user_field3 = #{userField3,jdbcType=DECIMAL},
+      user_field4 = #{userField4,jdbcType=DECIMAL},
+      complete_flg = #{completeFlg,jdbcType=VARCHAR},
+      db_last_upd_src = #{dbLastUpdSrc,jdbcType=VARCHAR},
+      home_phone_number = #{homePhoneNumber,jdbcType=VARCHAR},
+      loan_id = #{loanId,jdbcType=VARCHAR},
+      surname = #{surname,jdbcType=VARCHAR}
+    where row_id = #{rowId,jdbcType=INTEGER}
+  </update>
+</mapper>

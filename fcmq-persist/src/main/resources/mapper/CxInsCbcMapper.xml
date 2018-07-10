@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fc.mq.persist.mapper.CxInsCbcMapper" >
+  <resultMap id="BaseResultMap" type="com.fc.mq.persist.base.CxInsCbc" >
+    <result column="row_id" property="rowId" jdbcType="VARCHAR" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="created_by" property="createdBy" jdbcType="VARCHAR" />
+    <result column="last_upd" property="lastUpd" jdbcType="TIMESTAMP" />
+    <result column="last_upd_by" property="lastUpdBy" jdbcType="VARCHAR" />
+    <result column="modification_num" property="modificationNum" jdbcType="BIGINT" />
+    <result column="conflict_id" property="conflictId" jdbcType="VARCHAR" />
+    <result column="db_last_upd" property="dbLastUpd" jdbcType="TIMESTAMP" />
+    <result column="user_field17" property="userField17" jdbcType="DECIMAL" />
+    <result column="user_field18" property="userField18" jdbcType="DECIMAL" />
+    <result column="user_field19" property="userField19" jdbcType="DECIMAL" />
+    <result column="user_field20" property="userField20" jdbcType="DECIMAL" />
+    <result column="user_field24" property="userField24" jdbcType="DECIMAL" />
+    <result column="complete_flg" property="completeFlg" jdbcType="VARCHAR" />
+    <result column="db_last_upd_src" property="dbLastUpdSrc" jdbcType="VARCHAR" />
+    <result column="first_name" property="firstName" jdbcType="VARCHAR" />
+    <result column="home_address1" property="homeAddress1" jdbcType="VARCHAR" />
+    <result column="home_phone_number" property="homePhoneNumber" jdbcType="VARCHAR" />
+    <result column="loan_id" property="loanId" jdbcType="VARCHAR" />
+    <result column="surname" property="surname" jdbcType="VARCHAR" />
+    <result column="user_field1" property="userField1" jdbcType="VARCHAR" />
+    <result column="user_field2" property="userField2" jdbcType="VARCHAR" />
+    <result column="user_field3" property="userField3" jdbcType="VARCHAR" />
+    <result column="user_field4" property="userField4" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.fc.mq.persist.base.CxInsCbc" >
+    insert into cx_ins_cbc (row_id, created, created_by, 
+      last_upd, last_upd_by, modification_num, 
+      conflict_id, db_last_upd, user_field17, 
+      user_field18, user_field19, user_field20, 
+      user_field24, complete_flg, db_last_upd_src, 
+      first_name, home_address1, home_phone_number, 
+      loan_id, surname, user_field1, 
+      user_field2, user_field3, user_field4
+      )
+    values (#{rowId,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=VARCHAR}, 
+      #{lastUpd,jdbcType=TIMESTAMP}, #{lastUpdBy,jdbcType=VARCHAR}, #{modificationNum,jdbcType=BIGINT}, 
+      #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{userField17,jdbcType=DECIMAL}, 
+      #{userField18,jdbcType=DECIMAL}, #{userField19,jdbcType=DECIMAL}, #{userField20,jdbcType=DECIMAL}, 
+      #{userField24,jdbcType=DECIMAL}, #{completeFlg,jdbcType=VARCHAR}, #{dbLastUpdSrc,jdbcType=VARCHAR}, 
+      #{firstName,jdbcType=VARCHAR}, #{homeAddress1,jdbcType=VARCHAR}, #{homePhoneNumber,jdbcType=VARCHAR}, 
+      #{loanId,jdbcType=VARCHAR}, #{surname,jdbcType=VARCHAR}, #{userField1,jdbcType=VARCHAR}, 
+      #{userField2,jdbcType=VARCHAR}, #{userField3,jdbcType=VARCHAR}, #{userField4,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.fc.mq.persist.base.CxInsCbc" >
+    insert into cx_ins_cbc
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        row_id,
+      </if>
+      <if test="created != null" >
+        created,
+      </if>
+      <if test="createdBy != null" >
+        created_by,
+      </if>
+      <if test="lastUpd != null" >
+        last_upd,
+      </if>
+      <if test="lastUpdBy != null" >
+        last_upd_by,
+      </if>
+      <if test="modificationNum != null" >
+        modification_num,
+      </if>
+      <if test="conflictId != null" >
+        conflict_id,
+      </if>
+      <if test="dbLastUpd != null" >
+        db_last_upd,
+      </if>
+      <if test="userField17 != null" >
+        user_field17,
+      </if>
+      <if test="userField18 != null" >
+        user_field18,
+      </if>
+      <if test="userField19 != null" >
+        user_field19,
+      </if>
+      <if test="userField20 != null" >
+        user_field20,
+      </if>
+      <if test="userField24 != null" >
+        user_field24,
+      </if>
+      <if test="completeFlg != null" >
+        complete_flg,
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        db_last_upd_src,
+      </if>
+      <if test="firstName != null" >
+        first_name,
+      </if>
+      <if test="homeAddress1 != null" >
+        home_address1,
+      </if>
+      <if test="homePhoneNumber != null" >
+        home_phone_number,
+      </if>
+      <if test="loanId != null" >
+        loan_id,
+      </if>
+      <if test="surname != null" >
+        surname,
+      </if>
+      <if test="userField1 != null" >
+        user_field1,
+      </if>
+      <if test="userField2 != null" >
+        user_field2,
+      </if>
+      <if test="userField3 != null" >
+        user_field3,
+      </if>
+      <if test="userField4 != null" >
+        user_field4,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="rowId != null" >
+        #{rowId,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createdBy != null" >
+        #{createdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpd != null" >
+        #{lastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdBy != null" >
+        #{lastUpdBy,jdbcType=VARCHAR},
+      </if>
+      <if test="modificationNum != null" >
+        #{modificationNum,jdbcType=BIGINT},
+      </if>
+      <if test="conflictId != null" >
+        #{conflictId,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpd != null" >
+        #{dbLastUpd,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userField17 != null" >
+        #{userField17,jdbcType=DECIMAL},
+      </if>
+      <if test="userField18 != null" >
+        #{userField18,jdbcType=DECIMAL},
+      </if>
+      <if test="userField19 != null" >
+        #{userField19,jdbcType=DECIMAL},
+      </if>
+      <if test="userField20 != null" >
+        #{userField20,jdbcType=DECIMAL},
+      </if>
+      <if test="userField24 != null" >
+        #{userField24,jdbcType=DECIMAL},
+      </if>
+      <if test="completeFlg != null" >
+        #{completeFlg,jdbcType=VARCHAR},
+      </if>
+      <if test="dbLastUpdSrc != null" >
+        #{dbLastUpdSrc,jdbcType=VARCHAR},
+      </if>
+      <if test="firstName != null" >
+        #{firstName,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress1 != null" >
+        #{homeAddress1,jdbcType=VARCHAR},
+      </if>
+      <if test="homePhoneNumber != null" >
+        #{homePhoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="loanId != null" >
+        #{loanId,jdbcType=VARCHAR},
+      </if>
+      <if test="surname != null" >
+        #{surname,jdbcType=VARCHAR},
+      </if>
+      <if test="userField1 != null" >
+        #{userField1,jdbcType=VARCHAR},
+      </if>
+      <if test="userField2 != null" >
+        #{userField2,jdbcType=VARCHAR},
+      </if>
+      <if test="userField3 != null" >
+        #{userField3,jdbcType=VARCHAR},
+      </if>
+      <if test="userField4 != null" >
+        #{userField4,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
