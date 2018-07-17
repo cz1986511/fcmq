@@ -1,5 +1,12 @@
 package com.fc.mq.service.util;
 
+import java.beans.BeanInfo;
+import java.beans.Introspector;
+import java.beans.PropertyDescriptor;
+import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
+
 public class InstinctFraudCheckUtil
 {
     public static StringBuilder makeU2BXml()
@@ -78,6 +85,41 @@ public class InstinctFraudCheckUtil
         }
         xmlParams.append("</CBA>");
         return xmlParams;
+    }
+
+    public static Map<String, Object> convertBeanToMap(Object bean)
+    {
+        try
+        {
+            Class<? extends Object> type = bean.getClass();
+            Map<String, Object> returnMap = new HashMap<String, Object>();
+            BeanInfo beanInfo = Introspector.getBeanInfo(type);
+
+            PropertyDescriptor[] propertyDescriptors = beanInfo.getPropertyDescriptors();
+            PropertyDescriptor descriptor = null;
+            String propertyName = null;
+            Method readMethod = null;
+            Object result = null;
+            for (int i = 0; i < propertyDescriptors.length; i++)
+            {
+                descriptor = propertyDescriptors[i];
+                propertyName = descriptor.getName();
+                if (!propertyName.equals("class"))
+                {
+                    readMethod = descriptor.getReadMethod();
+                    if (null != readMethod)
+                    {
+                        result = readMethod.invoke(bean, new Object[0]);
+                        returnMap.put(propertyName, result);
+                    }
+                }
+            }
+            return returnMap;
+        }
+        catch (Exception e)
+        {
+            throw new RuntimeException(e);
+        }
     }
 
 }

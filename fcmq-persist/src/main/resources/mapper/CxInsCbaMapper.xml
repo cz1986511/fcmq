@@ -10,32 +10,32 @@
     <result column="modification_num" property="modificationNum" jdbcType="BIGINT" />
     <result column="conflict_id" property="conflictId" jdbcType="VARCHAR" />
     <result column="db_last_upd" property="dbLastUpd" jdbcType="TIMESTAMP" />
-    <result column="user_field17" property="userField17" jdbcType="DECIMAL" />
-    <result column="user_field18" property="userField18" jdbcType="DECIMAL" />
-    <result column="user_field19" property="userField19" jdbcType="DECIMAL" />
-    <result column="user_field20" property="userField20" jdbcType="DECIMAL" />
-    <result column="user_field21" property="userField21" jdbcType="TIMESTAMP" />
-    <result column="user_field22" property="userField22" jdbcType="TIMESTAMP" />
-    <result column="user_field23" property="userField23" jdbcType="TIMESTAMP" />
-    <result column="user_field24" property="userField24" jdbcType="DECIMAL" />
-    <result column="user_field25" property="userField25" jdbcType="DECIMAL" />
-    <result column="user_field26" property="userField26" jdbcType="DECIMAL" />
-    <result column="company_name" property="companyName" jdbcType="VARCHAR" />
+    <result column="user_field17" property="User_Field17" jdbcType="DECIMAL" />
+    <result column="user_field18" property="User_Field18" jdbcType="DECIMAL" />
+    <result column="user_field19" property="User_Field19" jdbcType="DECIMAL" />
+    <result column="user_field20" property="User_Field20" jdbcType="DECIMAL" />
+    <result column="user_field21" property="User_Field21" jdbcType="TIMESTAMP" />
+    <result column="user_field22" property="User_Field22" jdbcType="TIMESTAMP" />
+    <result column="user_field23" property="User_Field23" jdbcType="TIMESTAMP" />
+    <result column="user_field24" property="User_Field24" jdbcType="DECIMAL" />
+    <result column="user_field25" property="User_Field25" jdbcType="DECIMAL" />
+    <result column="user_field26" property="User_Field26" jdbcType="DECIMAL" />
+    <result column="company_name" property="Company_Name" jdbcType="VARCHAR" />
     <result column="complete_flg" property="completeFlg" jdbcType="VARCHAR" />
     <result column="db_last_upd_src" property="dbLastUpdSrc" jdbcType="VARCHAR" />
-    <result column="home_address1" property="homeAddress1" jdbcType="VARCHAR" />
-    <result column="home_address2" property="homeAddress2" jdbcType="VARCHAR" />
-    <result column="home_address3" property="homeAddress3" jdbcType="VARCHAR" />
-    <result column="home_address4" property="homeAddress4" jdbcType="VARCHAR" />
-    <result column="home_address5" property="homeAddress5" jdbcType="VARCHAR" />
-    <result column="home_address6" property="homeAddress6" jdbcType="VARCHAR" />
+    <result column="home_address1" property="Home_Address1" jdbcType="VARCHAR" />
+    <result column="home_address2" property="Home_Address2" jdbcType="VARCHAR" />
+    <result column="home_address3" property="Home_Address3" jdbcType="VARCHAR" />
+    <result column="home_address4" property="Home_Address4" jdbcType="VARCHAR" />
+    <result column="home_address5" property="Home_Address5" jdbcType="VARCHAR" />
+    <result column="home_address6" property="Home_Address6" jdbcType="VARCHAR" />
     <result column="loan_id" property="loanId" jdbcType="VARCHAR" />
-    <result column="surname" property="surname" jdbcType="VARCHAR" />
-    <result column="user_field1" property="userField1" jdbcType="VARCHAR" />
-    <result column="user_field2" property="userField2" jdbcType="VARCHAR" />
-    <result column="user_field3" property="userField3" jdbcType="VARCHAR" />
-    <result column="user_field4" property="userField4" jdbcType="VARCHAR" />
-    <result column="user_field5" property="userField5" jdbcType="VARCHAR" />
+    <result column="surname" property="Surname" jdbcType="VARCHAR" />
+    <result column="user_field1" property="User_Field1" jdbcType="VARCHAR" />
+    <result column="user_field2" property="User_Field2" jdbcType="VARCHAR" />
+    <result column="user_field3" property="User_Field3" jdbcType="VARCHAR" />
+    <result column="user_field4" property="User_Field4" jdbcType="VARCHAR" />
+    <result column="user_field5" property="User_Field5" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
       row_id, created, created_by, last_upd, last_upd_by, modification_num, 
@@ -64,16 +64,16 @@
       user_field5)
     values (#{rowId,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=VARCHAR}, 
       #{lastUpd,jdbcType=TIMESTAMP}, #{lastUpdBy,jdbcType=VARCHAR}, #{modificationNum,jdbcType=BIGINT}, 
-      #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{userField17,jdbcType=DECIMAL}, 
-      #{userField18,jdbcType=DECIMAL}, #{userField19,jdbcType=DECIMAL}, #{userField20,jdbcType=DECIMAL}, 
-      #{userField21,jdbcType=TIMESTAMP}, #{userField22,jdbcType=TIMESTAMP}, #{userField23,jdbcType=TIMESTAMP}, 
-      #{userField24,jdbcType=DECIMAL}, #{userField25,jdbcType=DECIMAL}, #{userField26,jdbcType=DECIMAL}, 
-      #{companyName,jdbcType=VARCHAR}, #{completeFlg,jdbcType=VARCHAR}, #{dbLastUpdSrc,jdbcType=VARCHAR}, 
-      #{homeAddress1,jdbcType=VARCHAR}, #{homeAddress2,jdbcType=VARCHAR}, #{homeAddress3,jdbcType=VARCHAR}, 
-      #{homeAddress4,jdbcType=VARCHAR}, #{homeAddress5,jdbcType=VARCHAR}, #{homeAddress6,jdbcType=VARCHAR}, 
-      #{loanId,jdbcType=VARCHAR}, #{surname,jdbcType=VARCHAR}, #{userField1,jdbcType=VARCHAR}, 
-      #{userField2,jdbcType=VARCHAR}, #{userField3,jdbcType=VARCHAR}, #{userField4,jdbcType=VARCHAR}, 
-      #{userField5,jdbcType=VARCHAR})
+      #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{User_Field17,jdbcType=DECIMAL}, 
+      #{User_Field18,jdbcType=DECIMAL}, #{User_Field19,jdbcType=DECIMAL}, #{User_Field20,jdbcType=DECIMAL}, 
+      #{User_Field21,jdbcType=TIMESTAMP}, #{User_Field22,jdbcType=TIMESTAMP}, #{User_Field23,jdbcType=TIMESTAMP}, 
+      #{User_Field24,jdbcType=DECIMAL}, #{User_Field25,jdbcType=DECIMAL}, #{User_Field26,jdbcType=DECIMAL}, 
+      #{Company_Name,jdbcType=VARCHAR}, #{completeFlg,jdbcType=VARCHAR}, #{dbLastUpdSrc,jdbcType=VARCHAR}, 
+      #{Home_Address1,jdbcType=VARCHAR}, #{Home_Address2,jdbcType=VARCHAR}, #{Home_Address3,jdbcType=VARCHAR}, 
+      #{Home_Address4,jdbcType=VARCHAR}, #{Home_Address5,jdbcType=VARCHAR}, #{Home_Address6,jdbcType=VARCHAR}, 
+      #{loanId,jdbcType=VARCHAR}, #{Surname,jdbcType=VARCHAR}, #{User_Field1,jdbcType=VARCHAR}, 
+      #{User_Field2,jdbcType=VARCHAR}, #{User_Field3,jdbcType=VARCHAR}, #{User_Field4,jdbcType=VARCHAR}, 
+      #{User_Field5,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fc.mq.persist.base.CxInsCba" >
     insert into cx_ins_cba
@@ -102,37 +102,37 @@
       <if test="dbLastUpd != null" >
         db_last_upd,
       </if>
-      <if test="userField17 != null" >
+      <if test="User_Field17 != null" >
         user_field17,
       </if>
-      <if test="userField18 != null" >
+      <if test="User_Field18 != null" >
         user_field18,
       </if>
-      <if test="userField19 != null" >
+      <if test="User_Field19 != null" >
         user_field19,
       </if>
-      <if test="userField20 != null" >
+      <if test="User_Field20 != null" >
         user_field20,
       </if>
-      <if test="userField21 != null" >
+      <if test="User_Field21 != null" >
         user_field21,
       </if>
-      <if test="userField22 != null" >
+      <if test="User_Field22 != null" >
         user_field22,
       </if>
-      <if test="userField23 != null" >
+      <if test="User_Field23 != null" >
         user_field23,
       </if>
-      <if test="userField24 != null" >
+      <if test="User_Field24 != null" >
         user_field24,
       </if>
-      <if test="userField25 != null" >
+      <if test="User_Field25 != null" >
         user_field25,
       </if>
-      <if test="userField26 != null" >
+      <if test="User_Field26 != null" >
         user_field26,
       </if>
-      <if test="companyName != null" >
+      <if test="Company_Name != null" >
         company_name,
       </if>
       <if test="completeFlg != null" >
@@ -141,43 +141,43 @@
       <if test="dbLastUpdSrc != null" >
         db_last_upd_src,
       </if>
-      <if test="homeAddress1 != null" >
+      <if test="Home_Address1 != null" >
         home_address1,
       </if>
-      <if test="homeAddress2 != null" >
+      <if test="Home_Address2 != null" >
         home_address2,
       </if>
-      <if test="homeAddress3 != null" >
+      <if test="Home_Address3 != null" >
         home_address3,
       </if>
-      <if test="homeAddress4 != null" >
+      <if test="Home_Address4 != null" >
         home_address4,
       </if>
-      <if test="homeAddress5 != null" >
+      <if test="Home_Address5 != null" >
         home_address5,
       </if>
-      <if test="homeAddress6 != null" >
+      <if test="Home_Address6 != null" >
         home_address6,
       </if>
       <if test="loanId != null" >
         loan_id,
       </if>
-      <if test="surname != null" >
+      <if test="Surname != null" >
         surname,
       </if>
-      <if test="userField1 != null" >
+      <if test="User_Field1 != null" >
         user_field1,
       </if>
-      <if test="userField2 != null" >
+      <if test="User_Field2 != null" >
         user_field2,
       </if>
-      <if test="userField3 != null" >
+      <if test="User_Field3 != null" >
         user_field3,
       </if>
-      <if test="userField4 != null" >
+      <if test="User_Field4 != null" >
         user_field4,
       </if>
-      <if test="userField5 != null" >
+      <if test="User_Field5 != null" >
         user_field5,
       </if>
     </trim>
@@ -206,38 +206,38 @@
       <if test="dbLastUpd != null" >
         #{dbLastUpd,jdbcType=TIMESTAMP},
       </if>
-      <if test="userField17 != null" >
-        #{userField17,jdbcType=DECIMAL},
+      <if test="User_Field17 != null" >
+        #{User_Field17,jdbcType=DECIMAL},
       </if>
-      <if test="userField18 != null" >
-        #{userField18,jdbcType=DECIMAL},
+      <if test="User_Field18 != null" >
+        #{User_Field18,jdbcType=DECIMAL},
       </if>
-      <if test="userField19 != null" >
-        #{userField19,jdbcType=DECIMAL},
+      <if test="User_Field19 != null" >
+        #{User_Field19,jdbcType=DECIMAL},
       </if>
-      <if test="userField20 != null" >
-        #{userField20,jdbcType=DECIMAL},
+      <if test="User_Field20 != null" >
+        #{User_Field20,jdbcType=DECIMAL},
       </if>
-      <if test="userField21 != null" >
-        #{userField21,jdbcType=TIMESTAMP},
+      <if test="User_Field21 != null" >
+        #{User_Field21,jdbcType=TIMESTAMP},
       </if>
-      <if test="userField22 != null" >
-        #{userField22,jdbcType=TIMESTAMP},
+      <if test="User_Field22 != null" >
+        #{User_Field22,jdbcType=TIMESTAMP},
       </if>
-      <if test="userField23 != null" >
-        #{userField23,jdbcType=TIMESTAMP},
+      <if test="User_Field23 != null" >
+        #{User_Field23,jdbcType=TIMESTAMP},
       </if>
-      <if test="userField24 != null" >
-        #{userField24,jdbcType=DECIMAL},
+      <if test="User_Field24 != null" >
+        #{User_Field24,jdbcType=DECIMAL},
       </if>
-      <if test="userField25 != null" >
-        #{userField25,jdbcType=DECIMAL},
+      <if test="User_Field25 != null" >
+        #{User_Field25,jdbcType=DECIMAL},
       </if>
-      <if test="userField26 != null" >
-        #{userField26,jdbcType=DECIMAL},
+      <if test="User_Field26 != null" >
+        #{User_Field26,jdbcType=DECIMAL},
       </if>
-      <if test="companyName != null" >
-        #{companyName,jdbcType=VARCHAR},
+      <if test="Company_Name != null" >
+        #{Company_Name,jdbcType=VARCHAR},
       </if>
       <if test="completeFlg != null" >
         #{completeFlg,jdbcType=VARCHAR},
@@ -245,44 +245,44 @@
       <if test="dbLastUpdSrc != null" >
         #{dbLastUpdSrc,jdbcType=VARCHAR},
       </if>
-      <if test="homeAddress1 != null" >
-        #{homeAddress1,jdbcType=VARCHAR},
+      <if test="Home_Address1 != null" >
+        #{Home_Address1,jdbcType=VARCHAR},
       </if>
-      <if test="homeAddress2 != null" >
-        #{homeAddress2,jdbcType=VARCHAR},
+      <if test="Home_Address2 != null" >
+        #{Home_Address2,jdbcType=VARCHAR},
       </if>
-      <if test="homeAddress3 != null" >
-        #{homeAddress3,jdbcType=VARCHAR},
+      <if test="Home_Address3 != null" >
+        #{Home_Address3,jdbcType=VARCHAR},
       </if>
-      <if test="homeAddress4 != null" >
-        #{homeAddress4,jdbcType=VARCHAR},
+      <if test="Home_Address4 != null" >
+        #{Home_Address4,jdbcType=VARCHAR},
       </if>
-      <if test="homeAddress5 != null" >
-        #{homeAddress5,jdbcType=VARCHAR},
+      <if test="Home_Address5 != null" >
+        #{Home_Address5,jdbcType=VARCHAR},
       </if>
-      <if test="homeAddress6 != null" >
-        #{homeAddress6,jdbcType=VARCHAR},
+      <if test="Home_Address6 != null" >
+        #{Home_Address6,jdbcType=VARCHAR},
       </if>
       <if test="loanId != null" >
         #{loanId,jdbcType=VARCHAR},
       </if>
-      <if test="surname != null" >
-        #{surname,jdbcType=VARCHAR},
+      <if test="Surname != null" >
+        #{Surname,jdbcType=VARCHAR},
       </if>
-      <if test="userField1 != null" >
-        #{userField1,jdbcType=VARCHAR},
+      <if test="User_Field1 != null" >
+        #{User_Field1,jdbcType=VARCHAR},
       </if>
-      <if test="userField2 != null" >
-        #{userField2,jdbcType=VARCHAR},
+      <if test="User_Field2 != null" >
+        #{User_Field2,jdbcType=VARCHAR},
       </if>
-      <if test="userField3 != null" >
-        #{userField3,jdbcType=VARCHAR},
+      <if test="User_Field3 != null" >
+        #{User_Field3,jdbcType=VARCHAR},
       </if>
-      <if test="userField4 != null" >
-        #{userField4,jdbcType=VARCHAR},
+      <if test="User_Field4 != null" >
+        #{User_Field4,jdbcType=VARCHAR},
       </if>
-      <if test="userField5 != null" >
-        #{userField5,jdbcType=VARCHAR},
+      <if test="User_Field5 != null" >
+        #{User_Field5,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>

@@ -1,5 +1,7 @@
 package com.fc.mq.service.impl;
 
+import java.util.List;
+
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -49,15 +51,15 @@ public class InsDataServiceImpl implements InsDataService
     {
         if (!StringUtils.isBlank(loanId))
         {
-            CxInsCba cba = cxInsCbaMapper.selectByLoanId(loanId);
-            CxInsCbb cbb = cxInsCbbMapper.selectByLoanId(loanId);
-            CxInsCbc cbc = cxInsCbcMapper.selectByLoanId(loanId);
-            CxInsU2a u2a = cxInsU2aMapper.selectByLoanId(loanId);
-            CxInsU2b u2b = cxInsU2bMapper.selectByLoanId(loanId);
-            CxInsU2c u2c = cxInsU2cMapper.selectByLoanId(loanId);
-            CxInsUcb ucb = cxInsUcbMapper.selectByLoanId(loanId);
-            CxInsUcc ucc = cxInsUccMapper.selectByLoanId(loanId);
-            CxInsUser2 user2 = cxInsUser2Mapper.selectByLoanId(loanId);
+            List<CxInsCba> cbas = cxInsCbaMapper.selectByLoanId(loanId);
+            List<CxInsCbb> cbbs = cxInsCbbMapper.selectByLoanId(loanId);
+            List<CxInsCbc> cbcs = cxInsCbcMapper.selectByLoanId(loanId);
+            List<CxInsU2a> u2as = cxInsU2aMapper.selectByLoanId(loanId);
+            List<CxInsU2b> u2bs = cxInsU2bMapper.selectByLoanId(loanId);
+            List<CxInsU2c> u2cs = cxInsU2cMapper.selectByLoanId(loanId);
+            List<CxInsUcb> ucbs = cxInsUcbMapper.selectByLoanId(loanId);
+            List<CxInsUcc> uccs = cxInsUccMapper.selectByLoanId(loanId);
+            List<CxInsUser2> user2s = cxInsUser2Mapper.selectByLoanId(loanId);
         }
         return null;
     }

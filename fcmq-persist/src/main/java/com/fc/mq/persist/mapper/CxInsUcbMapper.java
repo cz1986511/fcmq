@@ -1,5 +1,7 @@
 package com.fc.mq.persist.mapper;
 
+import java.util.List;
+
 import com.fc.mq.persist.base.CxInsUcb;
 
 public interface CxInsUcbMapper
@@ -10,7 +12,7 @@ public interface CxInsUcbMapper
 
     int insertSelective(CxInsUcb record);
 
-    CxInsUcb selectByLoanId(String loanId);
+    List<CxInsUcb> selectByLoanId(String loanId);
 
     int updateByPrimaryKeySelective(CxInsUcb record);
 

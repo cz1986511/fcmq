@@ -10,13 +10,13 @@
     <result column="modification_num" property="modificationNum" jdbcType="BIGINT" />
     <result column="conflict_id" property="conflictId" jdbcType="VARCHAR" />
     <result column="db_last_upd" property="dbLastUpd" jdbcType="TIMESTAMP" />
-    <result column="user_field36" property="userField36" jdbcType="DECIMAL" />
-    <result column="user_field37" property="userField37" jdbcType="DECIMAL" />
-    <result column="user_field38" property="userField38" jdbcType="DECIMAL" />
+    <result column="user_field36" property="User_Field36" jdbcType="DECIMAL" />
+    <result column="user_field37" property="User_Field37" jdbcType="DECIMAL" />
+    <result column="user_field38" property="User_Field38" jdbcType="DECIMAL" />
     <result column="complete_flg" property="completeFlg" jdbcType="VARCHAR" />
     <result column="db_last_upd_src" property="dbLastUpdSrc" jdbcType="VARCHAR" />
     <result column="loan_id" property="loanId" jdbcType="VARCHAR" />
-    <result column="user_field1" property="userField1" jdbcType="VARCHAR" />
+    <result column="user_field1" property="User_Field1" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
       row_id, created, created_by, last_upd, last_upd_by, modification_num, 
@@ -38,9 +38,9 @@
       )
     values (#{rowId,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=VARCHAR}, 
       #{lastUpd,jdbcType=TIMESTAMP}, #{lastUpdBy,jdbcType=VARCHAR}, #{modificationNum,jdbcType=BIGINT}, 
-      #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{userField36,jdbcType=DECIMAL}, 
-      #{userField37,jdbcType=DECIMAL}, #{userField38,jdbcType=DECIMAL}, #{completeFlg,jdbcType=VARCHAR}, 
-      #{dbLastUpdSrc,jdbcType=VARCHAR}, #{loanId,jdbcType=VARCHAR}, #{userField1,jdbcType=VARCHAR}
+      #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{User_Field36,jdbcType=DECIMAL}, 
+      #{User_Field37,jdbcType=DECIMAL}, #{User_Field38,jdbcType=DECIMAL}, #{completeFlg,jdbcType=VARCHAR}, 
+      #{dbLastUpdSrc,jdbcType=VARCHAR}, #{loanId,jdbcType=VARCHAR}, #{User_Field1,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.fc.mq.persist.base.CxInsU2b" >
@@ -70,13 +70,13 @@
       <if test="dbLastUpd != null" >
         db_last_upd,
       </if>
-      <if test="userField36 != null" >
+      <if test="User_Field36 != null" >
         user_field36,
       </if>
-      <if test="userField37 != null" >
+      <if test="User_Field37 != null" >
         user_field37,
       </if>
-      <if test="userField38 != null" >
+      <if test="User_Field38 != null" >
         user_field38,
       </if>
       <if test="completeFlg != null" >
@@ -88,7 +88,7 @@
       <if test="loanId != null" >
         loan_id,
       </if>
-      <if test="userField1 != null" >
+      <if test="User_Field1 != null" >
         user_field1,
       </if>
     </trim>
@@ -117,14 +117,14 @@
       <if test="dbLastUpd != null" >
         #{dbLastUpd,jdbcType=TIMESTAMP},
       </if>
-      <if test="userField36 != null" >
-        #{userField36,jdbcType=DECIMAL},
+      <if test="User_Field36 != null" >
+        #{User_Field36,jdbcType=DECIMAL},
       </if>
-      <if test="userField37 != null" >
-        #{userField37,jdbcType=DECIMAL},
+      <if test="User_Field37 != null" >
+        #{User_Field37,jdbcType=DECIMAL},
       </if>
-      <if test="userField38 != null" >
-        #{userField38,jdbcType=DECIMAL},
+      <if test="User_Field38 != null" >
+        #{User_Field38,jdbcType=DECIMAL},
       </if>
       <if test="completeFlg != null" >
         #{completeFlg,jdbcType=VARCHAR},
@@ -135,8 +135,8 @@
       <if test="loanId != null" >
         #{loanId,jdbcType=VARCHAR},
       </if>
-      <if test="userField1 != null" >
-        #{userField1,jdbcType=VARCHAR},
+      <if test="User_Field1 != null" >
+        #{User_Field1,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>

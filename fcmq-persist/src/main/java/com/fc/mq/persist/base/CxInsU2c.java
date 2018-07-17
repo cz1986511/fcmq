@@ -2,7 +2,8 @@ package com.fc.mq.persist.base;
 
 import java.util.Date;
 
-public class CxInsU2c {
+public class CxInsU2c
+{
     private String rowId;
 
     private Date created;
@@ -19,103 +20,103 @@ public class CxInsU2c {
 
     private String dbLastUpdSrc;
 
-    private String userField146;
+    private String User_Field146;
 
-    private String userField147;
+    private String User_Field147;
 
-    private String userField148;
+    private String User_Field148;
 
-    private String userField149;
+    private String User_Field149;
 
-    private String userField150;
+    private String User_Field150;
 
-    private String userField151;
+    private String User_Field151;
 
-    private String userField152;
+    private String User_Field152;
 
-    private String userField153;
+    private String User_Field153;
 
-    private String userField154;
+    private String User_Field154;
 
-    private String userField155;
+    private String User_Field155;
 
-    private String userField156;
+    private String User_Field156;
 
-    private Long userField157;
+    private Long User_Field157;
 
-    private Long userField158;
+    private Long User_Field158;
 
-    private Long userField159;
+    private Long User_Field159;
 
-    private Date userField160;
+    private Date User_Field160;
 
-    private Long userField166;
+    private Long User_Field166;
 
-    private Long userField167;
+    private Long User_Field167;
 
-    private String userField168;
+    private String User_Field168;
 
-    private String userField171;
+    private String User_Field171;
 
-    private Long userField172;
+    private Long User_Field172;
 
-    private String userField173;
+    private String User_Field173;
 
-    private Long userField174;
+    private Long User_Field174;
 
-    private String userField175;
+    private String User_Field175;
 
-    private String userField74;
+    private String User_Field74;
 
-    private String userField75;
+    private String User_Field75;
 
-    private String userField76;
+    private String User_Field76;
 
-    private String userField77;
+    private String User_Field77;
 
-    private String userField78;
+    private String User_Field78;
 
-    private String userField79;
+    private String User_Field79;
 
-    private String userField80;
+    private String User_Field80;
 
-    private String userField81;
+    private String User_Field81;
 
-    private String userField82;
+    private String User_Field82;
 
-    private String userField83;
+    private String User_Field83;
 
-    private String userField84;
+    private String User_Field84;
 
-    private String userField85;
+    private String User_Field85;
 
-    private String userField86;
+    private String User_Field86;
 
-    private String userField87;
+    private String User_Field87;
 
-    private String userField88;
+    private String User_Field88;
 
-    private String userField89;
+    private String User_Field89;
 
-    private String userField90;
+    private String User_Field90;
 
-    private String userField91;
+    private String User_Field91;
 
-    private String userField92;
+    private String User_Field92;
 
-    private String userField93;
+    private String User_Field93;
 
-    private String userField94;
+    private String User_Field94;
 
-    private String userField95;
+    private String User_Field95;
 
-    private String userField96;
+    private String User_Field96;
 
-    private String userField97;
+    private String User_Field97;
 
-    private String userField98;
+    private String User_Field98;
 
-    private String userField99;
+    private String User_Field99;
 
     private String loanId;
 
@@ -127,499 +128,623 @@ public class CxInsU2c {
 
     private String category;
 
-    public String getRowId() {
+    public String getRowId()
+    {
         return rowId;
     }
 
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId)
+    {
         this.rowId = rowId == null ? null : rowId.trim();
     }
 
-    public Date getCreated() {
+    public Date getCreated()
+    {
         return created;
     }
 
-    public void setCreated(Date created) {
+    public void setCreated(Date created)
+    {
         this.created = created;
     }
 
-    public Date getLastUpd() {
+    public Date getLastUpd()
+    {
         return lastUpd;
     }
 
-    public void setLastUpd(Date lastUpd) {
+    public void setLastUpd(Date lastUpd)
+    {
         this.lastUpd = lastUpd;
     }
 
-    public String getLastUpdBy() {
+    public String getLastUpdBy()
+    {
         return lastUpdBy;
     }
 
-    public void setLastUpdBy(String lastUpdBy) {
+    public void setLastUpdBy(String lastUpdBy)
+    {
         this.lastUpdBy = lastUpdBy == null ? null : lastUpdBy.trim();
     }
 
-    public Long getModificationNum() {
+    public Long getModificationNum()
+    {
         return modificationNum;
     }
 
-    public void setModificationNum(Long modificationNum) {
+    public void setModificationNum(Long modificationNum)
+    {
         this.modificationNum = modificationNum;
     }
 
-    public String getConflictId() {
+    public String getConflictId()
+    {
         return conflictId;
     }
 
-    public void setConflictId(String conflictId) {
+    public void setConflictId(String conflictId)
+    {
         this.conflictId = conflictId == null ? null : conflictId.trim();
     }
 
-    public Date getDbLastUpd() {
+    public Date getDbLastUpd()
+    {
         return dbLastUpd;
     }
 
-    public void setDbLastUpd(Date dbLastUpd) {
+    public void setDbLastUpd(Date dbLastUpd)
+    {
         this.dbLastUpd = dbLastUpd;
     }
 
-    public String getDbLastUpdSrc() {
+    public String getDbLastUpdSrc()
+    {
         return dbLastUpdSrc;
     }
 
-    public void setDbLastUpdSrc(String dbLastUpdSrc) {
+    public void setDbLastUpdSrc(String dbLastUpdSrc)
+    {
         this.dbLastUpdSrc = dbLastUpdSrc == null ? null : dbLastUpdSrc.trim();
     }
 
-    public String getUserField146() {
-        return userField146;
+    public String getUser_Field146()
+    {
+        return User_Field146;
     }
 
-    public void setUserField146(String userField146) {
-        this.userField146 = userField146 == null ? null : userField146.trim();
+    public void setUser_Field146(String User_Field146)
+    {
+        this.User_Field146 = User_Field146 == null ? null : User_Field146.trim();
     }
 
-    public String getUserField147() {
-        return userField147;
+    public String getUser_Field147()
+    {
+        return User_Field147;
     }
 
-    public void setUserField147(String userField147) {
-        this.userField147 = userField147 == null ? null : userField147.trim();
+    public void setUser_Field147(String User_Field147)
+    {
+        this.User_Field147 = User_Field147 == null ? null : User_Field147.trim();
     }
 
-    public String getUserField148() {
-        return userField148;
+    public String getUser_Field148()
+    {
+        return User_Field148;
     }
 
-    public void setUserField148(String userField148) {
-        this.userField148 = userField148 == null ? null : userField148.trim();
+    public void setUser_Field148(String User_Field148)
+    {
+        this.User_Field148 = User_Field148 == null ? null : User_Field148.trim();
     }
 
-    public String getUserField149() {
-        return userField149;
+    public String getUser_Field149()
+    {
+        return User_Field149;
     }
 
-    public void setUserField149(String userField149) {
-        this.userField149 = userField149 == null ? null : userField149.trim();
+    public void setUser_Field149(String User_Field149)
+    {
+        this.User_Field149 = User_Field149 == null ? null : User_Field149.trim();
     }
 
-    public String getUserField150() {
-        return userField150;
+    public String getUser_Field150()
+    {
+        return User_Field150;
     }
 
-    public void setUserField150(String userField150) {
-        this.userField150 = userField150 == null ? null : userField150.trim();
+    public void setUser_Field150(String User_Field150)
+    {
+        this.User_Field150 = User_Field150 == null ? null : User_Field150.trim();
     }
 
-    public String getUserField151() {
-        return userField151;
+    public String getUser_Field151()
+    {
+        return User_Field151;
     }
 
-    public void setUserField151(String userField151) {
-        this.userField151 = userField151 == null ? null : userField151.trim();
+    public void setUser_Field151(String User_Field151)
+    {
+        this.User_Field151 = User_Field151 == null ? null : User_Field151.trim();
     }
 
-    public String getUserField152() {
-        return userField152;
+    public String getUser_Field152()
+    {
+        return User_Field152;
     }
 
-    public void setUserField152(String userField152) {
-        this.userField152 = userField152 == null ? null : userField152.trim();
+    public void setUser_Field152(String User_Field152)
+    {
+        this.User_Field152 = User_Field152 == null ? null : User_Field152.trim();
     }
 
-    public String getUserField153() {
-        return userField153;
+    public String getUser_Field153()
+    {
+        return User_Field153;
     }
 
-    public void setUserField153(String userField153) {
-        this.userField153 = userField153 == null ? null : userField153.trim();
+    public void setUser_Field153(String User_Field153)
+    {
+        this.User_Field153 = User_Field153 == null ? null : User_Field153.trim();
     }
 
-    public String getUserField154() {
-        return userField154;
+    public String getUser_Field154()
+    {
+        return User_Field154;
     }
 
-    public void setUserField154(String userField154) {
-        this.userField154 = userField154 == null ? null : userField154.trim();
+    public void setUser_Field154(String User_Field154)
+    {
+        this.User_Field154 = User_Field154 == null ? null : User_Field154.trim();
     }
 
-    public String getUserField155() {
-        return userField155;
+    public String getUser_Field155()
+    {
+        return User_Field155;
     }
 
-    public void setUserField155(String userField155) {
-        this.userField155 = userField155 == null ? null : userField155.trim();
+    public void setUser_Field155(String User_Field155)
+    {
+        this.User_Field155 = User_Field155 == null ? null : User_Field155.trim();
     }
 
-    public String getUserField156() {
-        return userField156;
+    public String getUser_Field156()
+    {
+        return User_Field156;
     }
 
-    public void setUserField156(String userField156) {
-        this.userField156 = userField156 == null ? null : userField156.trim();
+    public void setUser_Field156(String User_Field156)
+    {
+        this.User_Field156 = User_Field156 == null ? null : User_Field156.trim();
     }
 
-    public Long getUserField157() {
-        return userField157;
+    public Long getUser_Field157()
+    {
+        return User_Field157;
     }
 
-    public void setUserField157(Long userField157) {
-        this.userField157 = userField157;
+    public void setUser_Field157(Long User_Field157)
+    {
+        this.User_Field157 = User_Field157;
     }
 
-    public Long getUserField158() {
-        return userField158;
+    public Long getUser_Field158()
+    {
+        return User_Field158;
     }
 
-    public void setUserField158(Long userField158) {
-        this.userField158 = userField158;
+    public void setUser_Field158(Long User_Field158)
+    {
+        this.User_Field158 = User_Field158;
     }
 
-    public Long getUserField159() {
-        return userField159;
+    public Long getUser_Field159()
+    {
+        return User_Field159;
     }
 
-    public void setUserField159(Long userField159) {
-        this.userField159 = userField159;
+    public void setUser_Field159(Long User_Field159)
+    {
+        this.User_Field159 = User_Field159;
     }
 
-    public Date getUserField160() {
-        return userField160;
+    public Date getUser_Field160()
+    {
+        return User_Field160;
     }
 
-    public void setUserField160(Date userField160) {
-        this.userField160 = userField160;
+    public void setUser_Field160(Date User_Field160)
+    {
+        this.User_Field160 = User_Field160;
     }
 
-    public Long getUserField166() {
-        return userField166;
+    public Long getUser_Field166()
+    {
+        return User_Field166;
     }
 
-    public void setUserField166(Long userField166) {
-        this.userField166 = userField166;
+    public void setUser_Field166(Long User_Field166)
+    {
+        this.User_Field166 = User_Field166;
     }
 
-    public Long getUserField167() {
-        return userField167;
+    public Long getUser_Field167()
+    {
+        return User_Field167;
     }
 
-    public void setUserField167(Long userField167) {
-        this.userField167 = userField167;
+    public void setUser_Field167(Long User_Field167)
+    {
+        this.User_Field167 = User_Field167;
     }
 
-    public String getUserField168() {
-        return userField168;
+    public String getUser_Field168()
+    {
+        return User_Field168;
     }
 
-    public void setUserField168(String userField168) {
-        this.userField168 = userField168 == null ? null : userField168.trim();
+    public void setUser_Field168(String User_Field168)
+    {
+        this.User_Field168 = User_Field168 == null ? null : User_Field168.trim();
     }
 
-    public String getUserField171() {
-        return userField171;
+    public String getUser_Field171()
+    {
+        return User_Field171;
     }
 
-    public void setUserField171(String userField171) {
-        this.userField171 = userField171 == null ? null : userField171.trim();
+    public void setUser_Field171(String User_Field171)
+    {
+        this.User_Field171 = User_Field171 == null ? null : User_Field171.trim();
     }
 
-    public Long getUserField172() {
-        return userField172;
+    public Long getUser_Field172()
+    {
+        return User_Field172;
     }
 
-    public void setUserField172(Long userField172) {
-        this.userField172 = userField172;
+    public void setUser_Field172(Long User_Field172)
+    {
+        this.User_Field172 = User_Field172;
     }
 
-    public String getUserField173() {
-        return userField173;
+    public String getUser_Field173()
+    {
+        return User_Field173;
     }
 
-    public void setUserField173(String userField173) {
-        this.userField173 = userField173 == null ? null : userField173.trim();
+    public void setUser_Field173(String User_Field173)
+    {
+        this.User_Field173 = User_Field173 == null ? null : User_Field173.trim();
     }
 
-    public Long getUserField174() {
-        return userField174;
+    public Long getUser_Field174()
+    {
+        return User_Field174;
     }
 
-    public void setUserField174(Long userField174) {
-        this.userField174 = userField174;
+    public void setUser_Field174(Long User_Field174)
+    {
+        this.User_Field174 = User_Field174;
     }
 
-    public String getUserField175() {
-        return userField175;
+    public String getUser_Field175()
+    {
+        return User_Field175;
     }
 
-    public void setUserField175(String userField175) {
-        this.userField175 = userField175 == null ? null : userField175.trim();
+    public void setUser_Field175(String User_Field175)
+    {
+        this.User_Field175 = User_Field175 == null ? null : User_Field175.trim();
     }
 
-    public String getUserField74() {
-        return userField74;
+    public String getUser_Field74()
+    {
+        return User_Field74;
     }
 
-    public void setUserField74(String userField74) {
-        this.userField74 = userField74 == null ? null : userField74.trim();
+    public void setUser_Field74(String User_Field74)
+    {
+        this.User_Field74 = User_Field74 == null ? null : User_Field74.trim();
     }
 
-    public String getUserField75() {
-        return userField75;
+    public String getUser_Field75()
+    {
+        return User_Field75;
     }
 
-    public void setUserField75(String userField75) {
-        this.userField75 = userField75 == null ? null : userField75.trim();
+    public void setUser_Field75(String User_Field75)
+    {
+        this.User_Field75 = User_Field75 == null ? null : User_Field75.trim();
     }
 
-    public String getUserField76() {
-        return userField76;
+    public String getUser_Field76()
+    {
+        return User_Field76;
     }
 
-    public void setUserField76(String userField76) {
-        this.userField76 = userField76 == null ? null : userField76.trim();
+    public void setUser_Field76(String User_Field76)
+    {
+        this.User_Field76 = User_Field76 == null ? null : User_Field76.trim();
     }
 
-    public String getUserField77() {
-        return userField77;
+    public String getUser_Field77()
+    {
+        return User_Field77;
     }
 
-    public void setUserField77(String userField77) {
-        this.userField77 = userField77 == null ? null : userField77.trim();
+    public void setUser_Field77(String User_Field77)
+    {
+        this.User_Field77 = User_Field77 == null ? null : User_Field77.trim();
     }
 
-    public String getUserField78() {
-        return userField78;
+    public String getUser_Field78()
+    {
+        return User_Field78;
     }
 
-    public void setUserField78(String userField78) {
-        this.userField78 = userField78 == null ? null : userField78.trim();
+    public void setUser_Field78(String User_Field78)
+    {
+        this.User_Field78 = User_Field78 == null ? null : User_Field78.trim();
     }
 
-    public String getUserField79() {
-        return userField79;
+    public String getUser_Field79()
+    {
+        return User_Field79;
     }
 
-    public void setUserField79(String userField79) {
-        this.userField79 = userField79 == null ? null : userField79.trim();
+    public void setUser_Field79(String User_Field79)
+    {
+        this.User_Field79 = User_Field79 == null ? null : User_Field79.trim();
     }
 
-    public String getUserField80() {
-        return userField80;
+    public String getUser_Field80()
+    {
+        return User_Field80;
     }
 
-    public void setUserField80(String userField80) {
-        this.userField80 = userField80 == null ? null : userField80.trim();
+    public void setUser_Field80(String User_Field80)
+    {
+        this.User_Field80 = User_Field80 == null ? null : User_Field80.trim();
     }
 
-    public String getUserField81() {
-        return userField81;
+    public String getUser_Field81()
+    {
+        return User_Field81;
     }
 
-    public void setUserField81(String userField81) {
-        this.userField81 = userField81 == null ? null : userField81.trim();
+    public void setUser_Field81(String User_Field81)
+    {
+        this.User_Field81 = User_Field81 == null ? null : User_Field81.trim();
     }
 
-    public String getUserField82() {
-        return userField82;
+    public String getUser_Field82()
+    {
+        return User_Field82;
     }
 
-    public void setUserField82(String userField82) {
-        this.userField82 = userField82 == null ? null : userField82.trim();
+    public void setUser_Field82(String User_Field82)
+    {
+        this.User_Field82 = User_Field82 == null ? null : User_Field82.trim();
     }
 
-    public String getUserField83() {
-        return userField83;
+    public String getUser_Field83()
+    {
+        return User_Field83;
     }
 
-    public void setUserField83(String userField83) {
-        this.userField83 = userField83 == null ? null : userField83.trim();
+    public void setUser_Field83(String User_Field83)
+    {
+        this.User_Field83 = User_Field83 == null ? null : User_Field83.trim();
     }
 
-    public String getUserField84() {
-        return userField84;
+    public String getUser_Field84()
+    {
+        return User_Field84;
     }
 
-    public void setUserField84(String userField84) {
-        this.userField84 = userField84 == null ? null : userField84.trim();
+    public void setUser_Field84(String User_Field84)
+    {
+        this.User_Field84 = User_Field84 == null ? null : User_Field84.trim();
     }
 
-    public String getUserField85() {
-        return userField85;
+    public String getUser_Field85()
+    {
+        return User_Field85;
     }
 
-    public void setUserField85(String userField85) {
-        this.userField85 = userField85 == null ? null : userField85.trim();
+    public void setUser_Field85(String User_Field85)
+    {
+        this.User_Field85 = User_Field85 == null ? null : User_Field85.trim();
     }
 
-    public String getUserField86() {
-        return userField86;
+    public String getUser_Field86()
+    {
+        return User_Field86;
     }
 
-    public void setUserField86(String userField86) {
-        this.userField86 = userField86 == null ? null : userField86.trim();
+    public void setUser_Field86(String User_Field86)
+    {
+        this.User_Field86 = User_Field86 == null ? null : User_Field86.trim();
     }
 
-    public String getUserField87() {
-        return userField87;
+    public String getUser_Field87()
+    {
+        return User_Field87;
     }
 
-    public void setUserField87(String userField87) {
-        this.userField87 = userField87 == null ? null : userField87.trim();
+    public void setUser_Field87(String User_Field87)
+    {
+        this.User_Field87 = User_Field87 == null ? null : User_Field87.trim();
     }
 
-    public String getUserField88() {
-        return userField88;
+    public String getUser_Field88()
+    {
+        return User_Field88;
     }
 
-    public void setUserField88(String userField88) {
-        this.userField88 = userField88 == null ? null : userField88.trim();
+    public void setUser_Field88(String User_Field88)
+    {
+        this.User_Field88 = User_Field88 == null ? null : User_Field88.trim();
     }
 
-    public String getUserField89() {
-        return userField89;
+    public String getUser_Field89()
+    {
+        return User_Field89;
     }
 
-    public void setUserField89(String userField89) {
-        this.userField89 = userField89 == null ? null : userField89.trim();
+    public void setUser_Field89(String User_Field89)
+    {
+        this.User_Field89 = User_Field89 == null ? null : User_Field89.trim();
     }
 
-    public String getUserField90() {
-        return userField90;
+    public String getUser_Field90()
+    {
+        return User_Field90;
     }
 
-    public void setUserField90(String userField90) {
-        this.userField90 = userField90 == null ? null : userField90.trim();
+    public void setUser_Field90(String User_Field90)
+    {
+        this.User_Field90 = User_Field90 == null ? null : User_Field90.trim();
     }
 
-    public String getUserField91() {
-        return userField91;
+    public String getUser_Field91()
+    {
+        return User_Field91;
     }
 
-    public void setUserField91(String userField91) {
-        this.userField91 = userField91 == null ? null : userField91.trim();
+    public void setUser_Field91(String User_Field91)
+    {
+        this.User_Field91 = User_Field91 == null ? null : User_Field91.trim();
     }
 
-    public String getUserField92() {
-        return userField92;
+    public String getUser_Field92()
+    {
+        return User_Field92;
     }
 
-    public void setUserField92(String userField92) {
-        this.userField92 = userField92 == null ? null : userField92.trim();
+    public void setUser_Field92(String User_Field92)
+    {
+        this.User_Field92 = User_Field92 == null ? null : User_Field92.trim();
     }
 
-    public String getUserField93() {
-        return userField93;
+    public String getUser_Field93()
+    {
+        return User_Field93;
     }
 
-    public void setUserField93(String userField93) {
-        this.userField93 = userField93 == null ? null : userField93.trim();
+    public void setUser_Field93(String User_Field93)
+    {
+        this.User_Field93 = User_Field93 == null ? null : User_Field93.trim();
     }
 
-    public String getUserField94() {
-        return userField94;
+    public String getUser_Field94()
+    {
+        return User_Field94;
     }
 
-    public void setUserField94(String userField94) {
-        this.userField94 = userField94 == null ? null : userField94.trim();
+    public void setUser_Field94(String User_Field94)
+    {
+        this.User_Field94 = User_Field94 == null ? null : User_Field94.trim();
     }
 
-    public String getUserField95() {
-        return userField95;
+    public String getUser_Field95()
+    {
+        return User_Field95;
     }
 
-    public void setUserField95(String userField95) {
-        this.userField95 = userField95 == null ? null : userField95.trim();
+    public void setUser_Field95(String User_Field95)
+    {
+        this.User_Field95 = User_Field95 == null ? null : User_Field95.trim();
     }
 
-    public String getUserField96() {
-        return userField96;
+    public String getUser_Field96()
+    {
+        return User_Field96;
     }
 
-    public void setUserField96(String userField96) {
-        this.userField96 = userField96 == null ? null : userField96.trim();
+    public void setUser_Field96(String User_Field96)
+    {
+        this.User_Field96 = User_Field96 == null ? null : User_Field96.trim();
     }
 
-    public String getUserField97() {
-        return userField97;
+    public String getUser_Field97()
+    {
+        return User_Field97;
     }
 
-    public void setUserField97(String userField97) {
-        this.userField97 = userField97 == null ? null : userField97.trim();
+    public void setUser_Field97(String User_Field97)
+    {
+        this.User_Field97 = User_Field97 == null ? null : User_Field97.trim();
     }
 
-    public String getUserField98() {
-        return userField98;
+    public String getUser_Field98()
+    {
+        return User_Field98;
     }
 
-    public void setUserField98(String userField98) {
-        this.userField98 = userField98 == null ? null : userField98.trim();
+    public void setUser_Field98(String User_Field98)
+    {
+        this.User_Field98 = User_Field98 == null ? null : User_Field98.trim();
     }
 
-    public String getUserField99() {
-        return userField99;
+    public String getUser_Field99()
+    {
+        return User_Field99;
     }
 
-    public void setUserField99(String userField99) {
-        this.userField99 = userField99 == null ? null : userField99.trim();
+    public void setUser_Field99(String User_Field99)
+    {
+        this.User_Field99 = User_Field99 == null ? null : User_Field99.trim();
     }
 
-    public String getLoanId() {
+    public String getLoanId()
+    {
         return loanId;
     }
 
-    public void setLoanId(String loanId) {
+    public void setLoanId(String loanId)
+    {
         this.loanId = loanId == null ? null : loanId.trim();
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name == null ? null : name.trim();
     }
 
-    public String getPanNo() {
+    public String getPanNo()
+    {
         return panNo;
     }
 
-    public void setPanNo(String panNo) {
+    public void setPanNo(String panNo)
+    {
         this.panNo = panNo == null ? null : panNo.trim();
     }
 
-    public String getReportId() {
+    public String getReportId()
+    {
         return reportId;
     }
 
-    public void setReportId(String reportId) {
+    public void setReportId(String reportId)
+    {
         this.reportId = reportId == null ? null : reportId.trim();
     }
 
-    public String getCategory() {
+    public String getCategory()
+    {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(String category)
+    {
         this.category = category == null ? null : category.trim();
     }
 }

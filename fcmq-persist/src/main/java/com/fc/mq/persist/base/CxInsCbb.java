@@ -2,7 +2,8 @@ package com.fc.mq.persist.base;
 
 import java.util.Date;
 
-public class CxInsCbb {
+public class CxInsCbb
+{
     private String rowId;
 
     private Date created;
@@ -25,181 +26,221 @@ public class CxInsCbb {
 
     private String category;
 
-    private String surname;
+    private String Surname;
 
-    private String homeAddress1;
+    private String Home_Address1;
 
-    private String homeAddress2;
+    private String Home_Address2;
 
-    private String homeAddress3;
+    private String Home_Address3;
 
-    private String homePostcode;
+    private String Home_Postcode;
 
-    private String homePhoneNumber;
+    private String Home_Phone_Number;
 
-    private String mobilePhoneNumber;
+    private String Mobile_Phone_Number;
 
-    private Long userField1;
+    private Long User_Field1;
 
-    private Date userField21;
+    private Date User_Field21;
 
-    public String getRowId() {
+    public String getRowId()
+    {
         return rowId;
     }
 
-    public void setRowId(String rowId) {
+    public void setRowId(String rowId)
+    {
         this.rowId = rowId == null ? null : rowId.trim();
     }
 
-    public Date getCreated() {
+    public Date getCreated()
+    {
         return created;
     }
 
-    public void setCreated(Date created) {
+    public void setCreated(Date created)
+    {
         this.created = created;
     }
 
-    public String getCreatedBy() {
+    public String getCreatedBy()
+    {
         return createdBy;
     }
 
-    public void setCreatedBy(String createdBy) {
+    public void setCreatedBy(String createdBy)
+    {
         this.createdBy = createdBy == null ? null : createdBy.trim();
     }
 
-    public Date getLastUpd() {
+    public Date getLastUpd()
+    {
         return lastUpd;
     }
 
-    public void setLastUpd(Date lastUpd) {
+    public void setLastUpd(Date lastUpd)
+    {
         this.lastUpd = lastUpd;
     }
 
-    public String getLastUpdBy() {
+    public String getLastUpdBy()
+    {
         return lastUpdBy;
     }
 
-    public void setLastUpdBy(String lastUpdBy) {
+    public void setLastUpdBy(String lastUpdBy)
+    {
         this.lastUpdBy = lastUpdBy == null ? null : lastUpdBy.trim();
     }
 
-    public Long getModificationNum() {
+    public Long getModificationNum()
+    {
         return modificationNum;
     }
 
-    public void setModificationNum(Long modificationNum) {
+    public void setModificationNum(Long modificationNum)
+    {
         this.modificationNum = modificationNum;
     }
 
-    public String getConflictId() {
+    public String getConflictId()
+    {
         return conflictId;
     }
 
-    public void setConflictId(String conflictId) {
+    public void setConflictId(String conflictId)
+    {
         this.conflictId = conflictId == null ? null : conflictId.trim();
     }
 
-    public Date getDbLastUpd() {
+    public Date getDbLastUpd()
+    {
         return dbLastUpd;
     }
 
-    public void setDbLastUpd(Date dbLastUpd) {
+    public void setDbLastUpd(Date dbLastUpd)
+    {
         this.dbLastUpd = dbLastUpd;
     }
 
-    public String getDbLastUpdSrc() {
+    public String getDbLastUpdSrc()
+    {
         return dbLastUpdSrc;
     }
 
-    public void setDbLastUpdSrc(String dbLastUpdSrc) {
+    public void setDbLastUpdSrc(String dbLastUpdSrc)
+    {
         this.dbLastUpdSrc = dbLastUpdSrc == null ? null : dbLastUpdSrc.trim();
     }
 
-    public String getLoanId() {
+    public String getLoanId()
+    {
         return loanId;
     }
 
-    public void setLoanId(String loanId) {
+    public void setLoanId(String loanId)
+    {
         this.loanId = loanId == null ? null : loanId.trim();
     }
 
-    public String getCategory() {
+    public String getCategory()
+    {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(String category)
+    {
         this.category = category == null ? null : category.trim();
     }
 
-    public String getSurname() {
-        return surname;
+    public String getSurname()
+    {
+        return Surname;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname == null ? null : surname.trim();
+    public void setSurname(String surname)
+    {
+        this.Surname = Surname == null ? null : Surname.trim();
     }
 
-    public String getHomeAddress1() {
-        return homeAddress1;
+    public String getHome_Address1()
+    {
+        return Home_Address1;
     }
 
-    public void setHomeAddress1(String homeAddress1) {
-        this.homeAddress1 = homeAddress1 == null ? null : homeAddress1.trim();
+    public void setHome_Address1(String Home_Address1)
+    {
+        this.Home_Address1 = Home_Address1 == null ? null : Home_Address1.trim();
     }
 
-    public String getHomeAddress2() {
-        return homeAddress2;
+    public String getHome_Address2()
+    {
+        return Home_Address2;
     }
 
-    public void setHomeAddress2(String homeAddress2) {
-        this.homeAddress2 = homeAddress2 == null ? null : homeAddress2.trim();
+    public void setHome_Address2(String Home_Address2)
+    {
+        this.Home_Address2 = Home_Address2 == null ? null : Home_Address2.trim();
     }
 
-    public String getHomeAddress3() {
-        return homeAddress3;
+    public String getHome_Address3()
+    {
+        return Home_Address3;
     }
 
-    public void setHomeAddress3(String homeAddress3) {
-        this.homeAddress3 = homeAddress3 == null ? null : homeAddress3.trim();
+    public void setHome_Address3(String Home_Address3)
+    {
+        this.Home_Address3 = Home_Address3 == null ? null : Home_Address3.trim();
     }
 
-    public String getHomePostcode() {
-        return homePostcode;
+    public String getHome_Postcode()
+    {
+        return Home_Postcode;
     }
 
-    public void setHomePostcode(String homePostcode) {
-        this.homePostcode = homePostcode == null ? null : homePostcode.trim();
+    public void setHome_Postcode(String Home_Postcode)
+    {
+        this.Home_Postcode = Home_Postcode == null ? null : Home_Postcode.trim();
     }
 
-    public String getHomePhoneNumber() {
-        return homePhoneNumber;
+    public String getHome_PhoneNumber()
+    {
+        return Home_Phone_Number;
     }
 
-    public void setHomePhoneNumber(String homePhoneNumber) {
-        this.homePhoneNumber = homePhoneNumber == null ? null : homePhoneNumber.trim();
+    public void setHome_PhoneNumber(String Home_PhoneNumber)
+    {
+        this.Home_Phone_Number = Home_PhoneNumber == null ? null : Home_PhoneNumber.trim();
     }
 
-    public String getMobilePhoneNumber() {
-        return mobilePhoneNumber;
+    public String getMobilePhoneNumber()
+    {
+        return Mobile_Phone_Number;
     }
 
-    public void setMobilePhoneNumber(String mobilePhoneNumber) {
-        this.mobilePhoneNumber = mobilePhoneNumber == null ? null : mobilePhoneNumber.trim();
+    public void setMobilePhoneNumber(String mobilePhoneNumber)
+    {
+        this.Mobile_Phone_Number = mobilePhoneNumber == null ? null : mobilePhoneNumber.trim();
     }
 
-    public Long getUserField1() {
-        return userField1;
+    public Long getUser_Field1()
+    {
+        return User_Field1;
     }
 
-    public void setUserField1(Long userField1) {
-        this.userField1 = userField1;
+    public void setUser_Field1(Long User_Field1)
+    {
+        this.User_Field1 = User_Field1;
     }
 
-    public Date getUserField21() {
-        return userField21;
+    public Date getUser_Field21()
+    {
+        return User_Field21;
     }
 
-    public void setUserField21(Date userField21) {
-        this.userField21 = userField21;
+    public void setUser_Field21(Date User_Field21)
+    {
+        this.User_Field21 = User_Field21;
     }
 }

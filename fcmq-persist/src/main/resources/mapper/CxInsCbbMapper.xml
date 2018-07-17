@@ -13,15 +13,15 @@
     <result column="db_last_upd_src" property="dbLastUpdSrc" jdbcType="VARCHAR" />
     <result column="loan_id" property="loanId" jdbcType="VARCHAR" />
     <result column="category" property="category" jdbcType="VARCHAR" />
-    <result column="surname" property="surname" jdbcType="VARCHAR" />
-    <result column="home_address1" property="homeAddress1" jdbcType="VARCHAR" />
-    <result column="home_address2" property="homeAddress2" jdbcType="VARCHAR" />
-    <result column="home_address3" property="homeAddress3" jdbcType="VARCHAR" />
-    <result column="home_postcode" property="homePostcode" jdbcType="VARCHAR" />
-    <result column="home_phone_number" property="homePhoneNumber" jdbcType="VARCHAR" />
-    <result column="mobile_phone_number" property="mobilePhoneNumber" jdbcType="VARCHAR" />
-    <result column="user_field1" property="userField1" jdbcType="DECIMAL" />
-    <result column="user_field21" property="userField21" jdbcType="TIMESTAMP" />
+    <result column="surname" property="Surname" jdbcType="VARCHAR" />
+    <result column="home_address1" property="Home_Address1" jdbcType="VARCHAR" />
+    <result column="home_address2" property="Home_Address2" jdbcType="VARCHAR" />
+    <result column="home_address3" property="Home_Address3" jdbcType="VARCHAR" />
+    <result column="home_postcode" property="Home_Postcode" jdbcType="VARCHAR" />
+    <result column="home_phone_number" property="Home_Phone_Number" jdbcType="VARCHAR" />
+    <result column="mobile_phone_number" property="Mobile_Phone_Number" jdbcType="VARCHAR" />
+    <result column="user_field1" property="User_Field1" jdbcType="DECIMAL" />
+    <result column="user_field21" property="User_Field21" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
       row_id, created, created_by, last_upd, last_upd_by, modification_num, 
@@ -46,10 +46,10 @@
     values (#{rowId,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{createdBy,jdbcType=VARCHAR}, 
       #{lastUpd,jdbcType=TIMESTAMP}, #{lastUpdBy,jdbcType=VARCHAR}, #{modificationNum,jdbcType=BIGINT}, 
       #{conflictId,jdbcType=VARCHAR}, #{dbLastUpd,jdbcType=TIMESTAMP}, #{dbLastUpdSrc,jdbcType=VARCHAR}, 
-      #{loanId,jdbcType=VARCHAR}, #{category,jdbcType=VARCHAR}, #{surname,jdbcType=VARCHAR}, 
-      #{homeAddress1,jdbcType=VARCHAR}, #{homeAddress2,jdbcType=VARCHAR}, #{homeAddress3,jdbcType=VARCHAR}, 
-      #{homePostcode,jdbcType=VARCHAR}, #{homePhoneNumber,jdbcType=VARCHAR}, #{mobilePhoneNumber,jdbcType=VARCHAR}, 
-      #{userField1,jdbcType=DECIMAL}, #{userField21,jdbcType=TIMESTAMP})
+      #{loanId,jdbcType=VARCHAR}, #{category,jdbcType=VARCHAR}, #{Surname,jdbcType=VARCHAR}, 
+      #{Home_Address1,jdbcType=VARCHAR}, #{Home_Address2,jdbcType=VARCHAR}, #{Home_Address3,jdbcType=VARCHAR}, 
+      #{Home_Postcode,jdbcType=VARCHAR}, #{Home_Phone_Number,jdbcType=VARCHAR}, #{Mobile_Phone_Number,jdbcType=VARCHAR}, 
+      #{User_Field1,jdbcType=DECIMAL}, #{User_Field21,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.fc.mq.persist.base.CxInsCbb" >
     insert into cx_ins_cbb
@@ -87,31 +87,31 @@
       <if test="category != null" >
         category,
       </if>
-      <if test="surname != null" >
+      <if test="Surname != null" >
         surname,
       </if>
-      <if test="homeAddress1 != null" >
+      <if test="Home_Address1 != null" >
         home_address1,
       </if>
-      <if test="homeAddress2 != null" >
+      <if test="Home_Address2 != null" >
         home_address2,
       </if>
-      <if test="homeAddress3 != null" >
+      <if test="Home_Address3 != null" >
         home_address3,
       </if>
-      <if test="homePostcode != null" >
+      <if test="Home_Postcode != null" >
         home_postcode,
       </if>
-      <if test="homePhoneNumber != null" >
+      <if test="Home_Phone_Number != null" >
         home_phone_number,
       </if>
-      <if test="mobilePhoneNumber != null" >
+      <if test="Mobile_Phone_Number != null" >
         mobile_phone_number,
       </if>
-      <if test="userField1 != null" >
+      <if test="User_Field1 != null" >
         user_field1,
       </if>
-      <if test="userField21 != null" >
+      <if test="User_Field21 != null" >
         user_field21,
       </if>
     </trim>
@@ -149,32 +149,32 @@
       <if test="category != null" >
         #{category,jdbcType=VARCHAR},
       </if>
-      <if test="surname != null" >
-        #{surname,jdbcType=VARCHAR},
+      <if test="Surname != null" >
+        #{Surname,jdbcType=VARCHAR},
       </if>
-      <if test="homeAddress1 != null" >
-        #{homeAddress1,jdbcType=VARCHAR},
+      <if test="Home_Address1 != null" >
+        #{Home_Address1,jdbcType=VARCHAR},
       </if>
-      <if test="homeAddress2 != null" >
-        #{homeAddress2,jdbcType=VARCHAR},
+      <if test="Home_Address2 != null" >
+        #{Home_Address2,jdbcType=VARCHAR},
       </if>
-      <if test="homeAddress3 != null" >
-        #{homeAddress3,jdbcType=VARCHAR},
+      <if test="Home_Address3 != null" >
+        #{Home_Address3,jdbcType=VARCHAR},
       </if>
-      <if test="homePostcode != null" >
-        #{homePostcode,jdbcType=VARCHAR},
+      <if test="Home_Postcode != null" >
+        #{Home_Postcode,jdbcType=VARCHAR},
       </if>
-      <if test="homePhoneNumber != null" >
-        #{homePhoneNumber,jdbcType=VARCHAR},
+      <if test="Home_Phone_Number != null" >
+        #{Home_Phone_Number,jdbcType=VARCHAR},
       </if>
-      <if test="mobilePhoneNumber != null" >
-        #{mobilePhoneNumber,jdbcType=VARCHAR},
+      <if test="Mobile_Phone_Number != null" >
+        #{Mobile_Phone_Number,jdbcType=VARCHAR},
       </if>
-      <if test="userField1 != null" >
-        #{userField1,jdbcType=DECIMAL},
+      <if test="User_Field1 != null" >
+        #{User_Field1,jdbcType=DECIMAL},
       </if>
-      <if test="userField21 != null" >
-        #{userField21,jdbcType=TIMESTAMP},
+      <if test="User_Field21 != null" >
+        #{User_Field21,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
